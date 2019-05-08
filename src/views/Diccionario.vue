@@ -2,26 +2,46 @@
  div#begin
   div.container#buscar    
     div.row.justify-content-center
-      input#inputText(placeholder="Palabra a ser Buscada") 
-      span
-        button#buscarPalabra Buscar
+      div
+        input#inputText(placeholder="Palabra a ser Buscada") 
+      div
+        Modal
+          button#buscarPalabra Buscar
   div#principal.container
     div.row.justify-content-center
       div#alfabeto.col-sm-9.col-xs-12
         div.row(v-for="i in 4").justify-content-center
-          label(v-for="j in 6" :key="j" :id="letras[j+i*4-4]") {{letras[j+i*5-5]}}
-      div#resultado.col-sm-auto.col-xs-12
-        div.row(v-for="i in 100").justify-content-center
-          label hola
+          label(v-for="j in 6" :key="j" :id="letras[j-1 + (i-1)*6]" v-on:click="llenarPalabras(j-1 + (i-1)*6)") {{letras[j-1 + (i-1)*6]}}
+      div#resultado.col-sm-3.col-xs-12
+        div.row(v-for="i in palabras.length").justify-content-center
+          Modal
+            label {{palabras[i-1]}}
 </template>
 
 <script>
+//importaciones, componentes
+import Modal from "@/components/Modal"
 
 export default{
   data(){
     return {
-      letras:["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"]
+      letras:["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"],
+      palabras:[]
     } 
+  },
+  methods:{
+  
+    llenarPalabras(letra){
+
+      this.palabras = []
+
+      for(var i=0; i<letra; i++){
+        this.palabras.push(this.letras[letra])
+      }
+    }
+  },
+  components:{
+    Modal
   }
 }
 
@@ -63,8 +83,13 @@ div#principal{
   margin-top: 10px;
 }
 
+#resultado>div>Modal>label{
+  cursor:pointer;
+  font-size: 10vw;
+}
+
 #alfabeto>div>label{
-    margin-left: 05vw;
+    margin-left: 5vw;
     font-size: 6vw;
     color:#dba238;
     cursor:pointer; 

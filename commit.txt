@@ -1,3 +1,2 @@
-* Cree la ventana de inicio, pero la imagen que se muestra es de muy baja calidad, por lo que hay me buscar una que sea buena.
-* La maqueta de la ventana de diccionario ya está terminada ahora solo falta conectarla con el servidor.
-* TODO: debo comenzar a hacer el servidor
+* Incluí la ventana modal para mostrar la información de la plabra seleccionada.
+* Arreglé las posiciones de las letras del alfabeto.

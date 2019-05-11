@@ -1,44 +1,48 @@
 <template lang="pug">
- div#begin
-  div.container#buscar    
-    div.row.justify-content-center
-      div
-        input#inputText(placeholder="Palabra a ser Buscada") 
-      div
-        Modal
-          button#buscarPalabra Buscar
-  div#principal.container
-    div.row.justify-content-center
-      div#alfabeto.col-sm-9.col-xs-12
-        div.row(v-for="i in 4").justify-content-center
-          label(v-for="j in 6" :key="j" :id="letras[j-1 + (i-1)*6]" v-on:click="llenarPalabras(j-1 + (i-1)*6)") {{letras[j-1 + (i-1)*6]}}
-      div#resultado.col-sm-3.col-xs-12
-        div.row(v-for="i in palabras.length").justify-content-center
-          Modal
-            label {{palabras[i-1]}}
+v-app
+  div#begin
+    div.container#buscar    
+      div.row.justify-content-center
+        div
+          input#inputText(placeholder="Palabra a ser Buscada" ref="busqueda") 
+        div
+          button#buscarPalabra(@click="mostrarModal") Buscar
+    div#principal.container
+      div.row.justify-content-center
+        div#alfabeto.col-sm-9.col-xs-12
+          div.row(v-for="i in 4").justify-content-center
+            label(v-for="j in 6" :key="j" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
+        div#resultado.col-sm-3.col-xs-12
+          div.row(v-for="i in getPalabrasPorLetra").justify-content-center
+            label(@click="mostrarModal") {{i.palabra}}
+    Modal
+      v-card(ref="modal") 
 </template>
 
 <script>
 //importaciones, componentes
+import {mapMutations} from "vuex"
+import {mapGetters} from "vuex"
 import Modal from "@/components/Modal"
 
 export default{
   data(){
     return {
       letras:["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"],
-      palabras:[]
     } 
   },
+  computed:{
+    ...mapGetters(['getPalabrasPorLetra']),
+  },
   methods:{
-  
-    llenarPalabras(letra){
+    ...mapMutations(['setLetraParaPalabras', 'setPalabra']),
+    mostrarModal(){
 
-      this.palabras = []
+      var value = this.$refs.busqueda.value
+      this.setPalabra(value)//Envio la palabra que va a ser buscada
 
-      for(var i=0; i<letra; i++){
-        this.palabras.push(this.letras[letra])
-      }
-    }
+      this.$refs.modal.$el.click()//Activo el elemento que abrirá el modal
+    },
   },
   components:{
     Modal
@@ -71,10 +75,10 @@ div#buscar{
 }
 
 div#resultado{
-  border-radius: 10px;
+  border-radius: 25px;
   border: 2px solid gray;
   height: 40vw;
-  width: 20vw;
+  width: 30vw;
   text-align: center;
   overflow-y: scroll;
 }
@@ -83,12 +87,13 @@ div#principal{
   margin-top: 10px;
 }
 
-#resultado>div>Modal>label{
+#resultado>div>label{
   cursor:pointer;
-  font-size: 10vw;
+  font-size: 2vw;
+  color: #8c3420;
 }
 
-#alfabeto>div>label{
+  #alfabeto>div>label{
     margin-left: 5vw;
     font-size: 6vw;
     color:#dba238;

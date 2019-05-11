@@ -74,7 +74,7 @@ export default {
 }
 
 #informacion label{
-  font-size: 10px;
+  font-size: calc(0.5em + 0.5vw);
   color: white;
 }
 

@@ -1,3 +1,1 @@
-* Terminé el front-end de la aplicación. Termine lo que me faltaba de la ventana modal, ya la estructura está terminada.
-* Mejoré la parte de la creacion de los v-dialogs, ahora ya no es necesario tener uno por cada boton solo activo un boton, que pertenece al modal, para así mostrar el modal con toda la información.
-* Agregué Vuex.
+* Ahora si terminé el front-end. Habia un problema con las pantallas grandes y pequeñas, no se ajustaba completamente o se mostraba completamente diferente.

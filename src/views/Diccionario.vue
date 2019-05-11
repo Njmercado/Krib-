@@ -9,11 +9,11 @@ v-app
           button#buscarPalabra(@click="mostrarModal") Buscar
     div#principal.container
       div.row.justify-content-center
-        div#alfabeto.col-sm-9.col-xs-12
-          div.row(v-for="i in 4").justify-content-center
-            label(v-for="j in 6" :key="j" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
-        div#resultado.col-sm-3.col-xs-12
-          div.row(v-for="i in getPalabrasPorLetra").justify-content-center
+        div#alfabeto.justify-content-center
+          div(v-for="i in 4")
+            label(xs12 v-for="j in 6" :key="`i${j}`" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
+        div#resultado(xs12).justify-content-center
+          div(v-for="i in getPalabrasPorLetra").justify-content-center
             label(@click="mostrarModal") {{i.palabra}}
     Modal
       v-card(ref="modal") 
@@ -78,9 +78,8 @@ div#resultado{
   border-radius: 25px;
   border: 2px solid gray;
   height: 40vw;
-  width: 30vw;
+  width: 25vw;
   text-align: center;
-  overflow-y: scroll;
 }
 
 div#principal{
@@ -94,8 +93,9 @@ div#principal{
 }
 
   #alfabeto>div>label{
-    margin-left: 5vw;
-    font-size: 6vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: calc(3em + 3vw);
     color:#dba238;
     cursor:pointer; 
   }

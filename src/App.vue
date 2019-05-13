@@ -6,9 +6,9 @@ div#app
     span.navbar-toggler-icon
    div.collapse.navbar-collapse#navbarNav
     div.navbar-nav
-     router-link.nav-item.nav-link#router(tag='inicio' to='/') Inicio
-     router-link.nav-item.nav-link#router2(tag='diccionario' to='/diccionario') Diccionario
-     router-link.nav-item.nav-link#router3(tag='curso' to='/curso') Curso
+     router-link.nav-item.nav-link#router(to='/') Inicio
+     router-link.nav-item.nav-link#router2(to='/diccionario') Diccionario
+     router-link.nav-item.nav-link#router3(to='/curso') Curso
   router-view
   div#informacion.row
     div#universidad.col-sm
@@ -22,7 +22,7 @@ div#app
       div
         label Creador
       div
-        label Grupo Estudiantil Makeda Kahina
+        img(src="https://i.ibb.co/8r5ZBy8/image1.jpg" width="150vw" height="60vw")
     div#desarrollador.col-sm
       div
         label Desarrollador

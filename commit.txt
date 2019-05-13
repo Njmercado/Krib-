@@ -1,1 +1,3 @@
-* Ahora si terminé el front-end. Habia un problema con las pantallas grandes y pequeñas, no se ajustaba completamente o se mostraba completamente diferente.
+* Termine la conexion con el servidor, para las busquedas y, por consiguiente, mostrarle la informacion al usuario.
+* Agregué la parte de la descarga del archivo, curso.
+* Terminé la pestaña de curso.

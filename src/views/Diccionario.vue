@@ -6,7 +6,7 @@ v-app
         div
           input#inputText(placeholder="Palabra a ser Buscada" ref="busqueda") 
         div
-          button#buscarPalabra(@click="mostrarModal") Buscar
+          button#buscarPalabra(@click="mostrarModal($refs.busqueda.value)") Buscar
     div#principal.container
       div.row.justify-content-center
         div#alfabeto.justify-content-center
@@ -14,7 +14,7 @@ v-app
             label(xs12 v-for="j in 6" :key="`i${j}`" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
         div#resultado(xs12).justify-content-center
           div(v-for="i in getPalabrasPorLetra").justify-content-center
-            label(@click="mostrarModal") {{i.palabra}}
+            label(@click="mostrarModal(i.palabra)") {{i.palabra}}
     Modal
       v-card(ref="modal") 
 </template>
@@ -26,6 +26,7 @@ import {mapGetters} from "vuex"
 import Modal from "@/components/Modal"
 
 export default{
+  name: "Diccionario",
   data(){
     return {
       letras:["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"],
@@ -36,9 +37,8 @@ export default{
   },
   methods:{
     ...mapMutations(['setLetraParaPalabras', 'setPalabra']),
-    mostrarModal(){
+    mostrarModal(value){
 
-      var value = this.$refs.busqueda.value
       this.setPalabra(value)//Envio la palabra que va a ser buscada
 
       this.$refs.modal.$el.click()//Activo el elemento que abrirá el modal
@@ -80,6 +80,7 @@ div#resultado{
   height: 40vw;
   width: 25vw;
   text-align: center;
+  overflow-y: scroll;
 }
 
 div#principal{

@@ -1,3 +1,1 @@
-* Termine la conexion con el servidor, para las busquedas y, por consiguiente, mostrarle la informacion al usuario.
-* Agregué la parte de la descarga del archivo, curso.
-* Terminé la pestaña de curso.
+* Centralicé la conexion del fron-end con el back-end, para un mejor manejo.

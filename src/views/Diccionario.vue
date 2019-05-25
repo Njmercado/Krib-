@@ -4,7 +4,7 @@ v-app
     div.container#buscar    
       div.row.justify-content-center
         div
-          input#inputText(placeholder="Palabra a ser Buscada" ref="busqueda") 
+          input#inputText(placeholder="Escribe una palabra" ref="busqueda") 
         div
           button#buscarPalabra(@click="mostrarModal($refs.busqueda.value)") Buscar
     div#principal.container

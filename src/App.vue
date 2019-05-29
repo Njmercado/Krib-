@@ -6,7 +6,7 @@ div#app
     span.navbar-toggler-icon
    div.collapse.navbar-collapse#navbarNav
     div.navbar-nav
-     router-link.nav-item.nav-link#router(to='/*') Inicio
+     router-link.nav-item.nav-link#router(to='/') Inicio
      router-link.nav-item.nav-link#router2(to='/diccionario') Diccionario
      router-link.nav-item.nav-link#router3(to='/curso') Curso
   router-view
@@ -30,17 +30,11 @@ div#app
         label Nino Jesús Mercado Consuegra
       div
         label njesusmercado@gmail.com
-      div
-        label +57 3157567254
 </template>
 
 <script>
 export default {
-  methods:{
-    showSomething: (res)=> {
-      alert(res)
-    }
-  }
+  name:"App"
 }
 </script>
 

@@ -1,1 +1,1 @@
-* Centralicé la conexion del front-end con el back-end, para un mejor manejo.
+* Agregué la opción de busca presionando enter

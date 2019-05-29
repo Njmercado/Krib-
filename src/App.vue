@@ -6,7 +6,7 @@ div#app
     span.navbar-toggler-icon
    div.collapse.navbar-collapse#navbarNav
     div.navbar-nav
-     router-link.nav-item.nav-link#router(to='/') Inicio
+     router-link.nav-item.nav-link#router(to='/*') Inicio
      router-link.nav-item.nav-link#router2(to='/diccionario') Diccionario
      router-link.nav-item.nav-link#router3(to='/curso') Curso
   router-view

@@ -7,14 +7,13 @@ class Server {
   
   static async getPalabrasPorLetra(letra) {
       
-    const result = await axios.get(`${serverName}palabras-por-letra?letra=${letra}`)
+    const result = await axios.get(`${serverName}buscar/lista_palabras?letra=${letra}`)
     return result.data.response.map(res => ({palabra:res}))
   }
 
   static async buscarPalabra(palabra){
 
-    const result = await axios.get(`${serverName}buscar-palabra?palabra=${palabra}`)
-    console.log(result.data)
+    const result = await axios.get(`${serverName}buscar/palabra?palabra=${palabra}`)
     return {
       definicion: result.data.definicion,
       ejemplos: result.data.ejemplos,
@@ -24,7 +23,7 @@ class Server {
 
   static async descargarCurso(){
   
-    axios.get(`${serverName}descargar-curso`, 
+    axios.get(`${serverName}download/curso`, 
       {
         responseType: 'blob'
       }

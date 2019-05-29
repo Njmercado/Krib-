@@ -4,14 +4,14 @@ v-app
     div.container#buscar    
       div.row.justify-content-center
         div
-          input#inputText(placeholder="Escribe una palabra" ref="busqueda") 
+          input#inputText(placeholder="Escribe una palabra" v-on:keyup.enter="mostrarModal($refs.busqueda.value)" ref="busqueda") 
         div
           button#buscarPalabra(@click="mostrarModal($refs.busqueda.value)") Buscar
     div#principal.container
       div.row.justify-content-center
         div#alfabeto.justify-content-center
           div(v-for="i in 4")
-            label(xs12 v-for="j in 6" :key="`i${j}`" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
+            label(xs12 v-for="j in 5" :key="`i${j}`" :id="letras[j-1 + (i-1)*6]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*6])") {{letras[j-1 + (i-1)*6]}}
         div#resultado(xs12).justify-content-center
           div(v-for="i in getPalabrasPorLetra").justify-content-center
             label(@click="mostrarModal(i.palabra)") {{i.palabra}}
@@ -29,7 +29,7 @@ export default{
   name: "Diccionario",
   data(){
     return {
-      letras:["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"],
+      letras:["A","B", "C", "D", "E", "F", "G", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "S", "T", "U"],
     } 
   },
   computed:{

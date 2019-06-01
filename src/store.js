@@ -10,8 +10,8 @@ export default new Vuex.Store({
     palabra: 'Palabra',
     definicion:'Definicion', 
     ejemplos: [],
-    listaPalabrasPorLetra: [],
-    letra: ''
+    listaPalabras: [],
+    letra: '',
   },
   mutations: {// Sirve para actualizar/cambiar informacion de las variables declaradas arriba(state)
 
@@ -20,7 +20,7 @@ export default new Vuex.Store({
       if (letra.toLowerCase() != state.letra.toLowerCase()) {//Solo va a realizar busqueda cuando se digite una letra diferente
       
         Server.getPalabrasPorLetra(letra).then(result =>{
-          state.listaPalabrasPorLetra = result
+          state.listaPalabras = result
         })
       }
     },
@@ -35,13 +35,27 @@ export default new Vuex.Store({
           state.ejemplos = result.ejemplos
         })
       }
-    }
+    },
+    setAutoCompletado(state, palabra){
+
+      if(palabra.length > 0){
+        
+        Server.autoCompletado(palabra).then(result =>{
+
+          state.listaPalabras = result
+        })
+      }else{
+        
+        state.listaPalabras = []
+      }
+      
+    },
   },
   getters:{
     getEjemplos: state => state.ejemplos,
     getDefinicion: state => state.definicion,
     getPalabra: state => state.palabra,
-    getPalabrasPorLetra: state => state.listaPalabrasPorLetra,
-    getLetra: state => state.letra
+    getPalabrasPorLetra: state => state.listaPalabras,
+    getLetra: state => state.letra,
   }
 })

@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app
+  v-app#background
     v-container(fill-height)
       v-layout(justify-center align-center row )
         v-flex(xs11 sm10 lg6 xl6)
@@ -31,4 +31,8 @@ export default {
   cursor: pointer;
 }
 
+#background{
+  
+  background-image: url('https://i.ibb.co/K6KTnGx/curso.jpg')
+}
 </style>

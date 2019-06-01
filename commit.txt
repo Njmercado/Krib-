@@ -1,2 +1,4 @@
-* Ahora la vista de diccionario se ve mejor, las fuentes del resultado es más responsive.
-* Quité las letras, del diccionario que se muestra, que no tenian ninguna palabra relacionada. 
+* Implementación de autocompletado:
+  - Primero la conexion con el servidor para traer las palabras una vez se van presionando.
+  - Implementación en el Front. El autocompletado se muestra en la tabla de resultados(espacio a la derecha).
+* Cambio del fondo de pantalla de la pestaña curso, para que se vea un poco 'mejor'.

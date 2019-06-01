@@ -4,14 +4,25 @@ v-app
     div.container#buscar    
       div.row.justify-content-center
         div
-          input#inputText(placeholder="Escribe una palabra" v-on:keyup.enter="mostrarModal($refs.busqueda.value)" ref="busqueda") 
+          input#autocompletado(
+            placeholder="Escribe una palabra" 
+            v-on:keyup="setAutoCompletado($refs.busqueda.value)" 
+            v-on:keyup.enter="mostrarModal($refs.busqueda.value)" 
+            ref="busqueda"
+           )
         div
           button#buscarPalabra(@click="mostrarModal($refs.busqueda.value)") Buscar
     div#principal.container
       div.row.justify-content-center
         div#alfabeto.justify-content-center
           div(v-for="i in 4")
-            label(xs12 v-for="j in 5" :key="`i${j}`" :id="letras[j-1 + (i-1)*5]" @click="setLetraParaPalabras(letras[j-1 + (i-1)*5])") {{letras[j-1 + (i-1)*5]}}
+            label(
+              xs12 
+              v-for="j in 5" 
+              :key="`i${j}`" 
+              :id="letras[j-1 + (i-1)*5]" 
+              @click="setLetraParaPalabras(letras[j-1 + (i-1)*5])"
+            ) {{letras[j-1 + (i-1)*5]}}
         div#resultado(xs12).justify-content-center
           div(v-for="i in getPalabrasPorLetra").justify-content-center
             label(@click="mostrarModal(i.palabra)") {{i.palabra}}
@@ -33,10 +44,10 @@ export default{
     } 
   },
   computed:{
-    ...mapGetters(['getPalabrasPorLetra']),
+    ...mapGetters(['getPalabrasPorLetra', 'getAutoCompletado']),
   },
   methods:{
-    ...mapMutations(['setLetraParaPalabras', 'setPalabra']),
+    ...mapMutations(['setLetraParaPalabras', 'setPalabra', 'setAutoCompletado']),
     mostrarModal(value){
 
       this.setPalabra(value)//Envio la palabra que va a ser buscada
@@ -45,22 +56,13 @@ export default{
     },
   },
   components:{
-    Modal
+    Modal,
   }
 }
 
 </script>
 
 <style>
-
-input#inputText{
-  border: 2px solid #8b8b8b;
-  background: #dbdbdb;
-  width: 15em;
-  height: 3em;
-  border-radius: 10px;
-  text-align: center;
-}
 
 button#buscarPalabra{
   background: #8c3420;
@@ -72,6 +74,15 @@ button#buscarPalabra{
 
 div#buscar{
   margin-top: 20px;
+}
+
+#autocompletado{
+  border: 2px solid #8b8b8b;
+  background: #dbdbdb;
+  width: 15em;
+  height: 3em;
+  border-radius: 10px;
+  text-align: center;
 }
 
 div#resultado{

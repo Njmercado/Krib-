@@ -13,23 +13,16 @@ div#app
   div#informacion.row
     div#universidad.col-sm
       div#logoUniversidad
-        img(src="https://i.ibb.co/HdbCKKp/Uninorte.png" width="50px" height="60px")
+        img(src="https://i.ibb.co/HdbCKKp/Uninorte.png" style="height: 100%; width: 12%")
       div
        label Universidad del Norte
       div
-       label Barranquilla-Colombia
+       label Barranquilla - Colombia
     div#grupoEstudiantil.col-sm
       div
+        img(src="https://i.ibb.co/StnCxkv/image1.jpg" style="height: 100%; width: 50%")
+      div(style="margin-top: 10px")
         label Creador
-      div
-        img(src="https://i.ibb.co/8r5ZBy8/image1.jpg" width="150vw" height="60vw")
-    div#desarrollador.col-sm
-      div
-        label Desarrollador
-      div
-        label Nino Jesús Mercado Consuegra
-      div
-        label njesusmercado@gmail.com
 </template>
 
 <script>
@@ -61,10 +54,13 @@ export default {
 
 #app > #informacion{
   background: #3b3b3b;
+  height: calc(30vh + 10vw);
 }
 
 #universidad, #grupoEstudiantil, #desarrollador{
   text-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 #informacion label{

@@ -1,7 +1,7 @@
 <template lang="pug">
  div#begin
   div#imagenInicio
-    img(src="https://i.ibb.co/jJVXytY/Captura-de-pantalla-de-2019-05-04-16-56-12.png")
+    img(src="https://i.ibb.co/FzDP6PW/Sin-t-tulo-2.png" alt="logo kribi") 
   div.container
     div#separacion 
   div#contenido
@@ -21,9 +21,17 @@ export default {
 </script>
 
 <style>
-  #imagenInicio > img{
+  #imagenInicio{
     height: 100%;
     width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+
+  #imagenInicio > img{
+    width: 70%;
   }
 
   #separacion{

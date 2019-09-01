@@ -1,4 +1,4 @@
-* Implementación de autocompletado:
-  - Primero la conexion con el servidor para traer las palabras una vez se van presionando.
-  - Implementación en el Front. El autocompletado se muestra en la tabla de resultados(espacio a la derecha).
-* Cambio del fondo de pantalla de la pestaña curso, para que se vea un poco 'mejor'.
+* Cambio de la pagina principa:
+  - Cambie la imagen de inicio, está imagen está mucho más estetica que la anterior.
+* Eliminé el boton de busqueda del diccionario, porque era completamente inutil ya que todo el trabajo lo está realizando es el autocompletado, por ende no es de relevancia el tener ese boton ahí.
+* Agregue que las busquedas se realizen a partir de tres caracteres, ya que la palabra más corta tiene 3 caracteres, por ende se estarian realizando busquedas innecesarias a la DB

@@ -10,8 +10,6 @@ v-app
             v-on:keyup.enter="mostrarModal($refs.busqueda.value)" 
             ref="busqueda"
            )
-        div
-          button#buscarPalabra(@click="mostrarModal($refs.busqueda.value)") Buscar
     div#principal.container
       div.row.justify-content-center
         div#alfabeto.justify-content-center

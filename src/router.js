@@ -26,14 +26,19 @@ export default new Router({
       component:()=> import('./views/Curso.vue')
     },
     {
-      path: '/noticias',
-      name: 'Noticias',
+      path: '/chakero',
+      name: 'Chakero',
       component: () => import('./views/Noticias.vue')
     },
     {
       path: '/creditos',
       name: 'Creditos',
       component: ()=>import('./views/Creditos.vue')
+    },
+    {
+      path: '/bentorriyo',
+      name: 'Bentorriyo',
+      component: () => import('./views/Tienda.vue')
     },
     { 
       path: '*', 

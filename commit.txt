@@ -1,6 +1,8 @@
 * Cambios nuevos:
- - Agregué el icono, favicon, de Kribí.
- - Cambié el nombre que aparece en la pestaña: kribi --> Kribí
- - Agregué otras pestañas:
-    + About: información de nosotros.
-    + Noticias: lugar para poner noticias de las personas que editan, administran, la pagina.
+ - Agregué otras dos ventanas:
+  + Chakero --> Noticias
+  + Bentorriyo --> Tienda
+ - Agreué la informacion que faltaba: 
+  + Descripcion
+  + Origen
+  + Antecedentes

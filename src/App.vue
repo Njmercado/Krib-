@@ -16,7 +16,8 @@ div#app
      router-link.nav-item.nav-link#router(to='/') Inicio
      router-link.nav-item.nav-link#router(to='/diccionario') Diccionario
      router-link.nav-item.nav-link#router(to='/curso') Curso
-     router-link.nav-item.nav-link#router(to='/noticias') Noticias 
+     router-link.nav-item.nav-link#router(to='/chakero' title="Noticias") Chakero 
+     router-link.nav-item.nav-link#router(to='/bentorriyo' title="Tienda/Store") Bentorriyo 
      router-link.nav-item.nav-link#router(to='/creditos') Creditos 
   router-view
   div#informacion.row

@@ -1,4 +1,6 @@
-* Cambio de la pagina principa:
-  - Cambie la imagen de inicio, está imagen está mucho más estetica que la anterior.
-* Eliminé el boton de busqueda del diccionario, porque era completamente inutil ya que todo el trabajo lo está realizando es el autocompletado, por ende no es de relevancia el tener ese boton ahí.
-* Agregue que las busquedas se realizen a partir de tres caracteres, ya que la palabra más corta tiene 3 caracteres, por ende se estarian realizando busquedas innecesarias a la DB
+* Cambios nuevos:
+ - Agregué el icono, favicon, de Kribí.
+ - Cambié el nombre que aparece en la pestaña: kribi --> Kribí
+ - Agregué otras pestañas:
+    + About: información de nosotros.
+    + Noticias: lugar para poner noticias de las personas que editan, administran, la pagina.

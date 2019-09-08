@@ -2,13 +2,22 @@
 div#app
   nav.navbar.navbar-expand-lg.navbar-light#nav
    a.navbar-brand(href='#' style="color:  #8c3420") Kribí
-   button.navbar-toggler(type='button' data-toggle="collapse" data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+   button.navbar-toggler(
+     type='button' 
+     data-toggle="collapse" 
+     data-target='#navbarNav' 
+     aria-controls='navbarNav' 
+     aria-expanded='false' 
+     aria-label='Toggle navigation'
+    )
     span.navbar-toggler-icon
    div.collapse.navbar-collapse#navbarNav
     div.navbar-nav
      router-link.nav-item.nav-link#router(to='/') Inicio
-     router-link.nav-item.nav-link#router2(to='/diccionario') Diccionario
-     router-link.nav-item.nav-link#router3(to='/curso') Curso
+     router-link.nav-item.nav-link#router(to='/diccionario') Diccionario
+     router-link.nav-item.nav-link#router(to='/curso') Curso
+     router-link.nav-item.nav-link#router(to='/noticias') Noticias 
+     router-link.nav-item.nav-link#router(to='/creditos') Creditos 
   router-view
   div#informacion.row
     div#universidad.col-sm
@@ -68,7 +77,7 @@ export default {
   color: white;
 }
 
-#router, #router2, #router3{
+#router {
   color: white;
   cursor: pointer;
 }

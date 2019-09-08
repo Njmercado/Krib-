@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -23,6 +24,20 @@ export default new Router({
       path:'/curso',
       name: 'Curso',
       component:()=> import('./views/Curso.vue')
-    }
+    },
+    {
+      path: '/noticias',
+      name: 'Noticias',
+      component: () => import('./views/Noticias.vue')
+    },
+    {
+      path: '/creditos',
+      name: 'Creditos',
+      component: ()=>import('./views/Creditos.vue')
+    },
+    { 
+      path: '*', 
+      redirect: '/' 
+    }, // catch all use case
   ]
 })

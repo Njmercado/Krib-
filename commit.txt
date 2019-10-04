@@ -1,8 +1,5 @@
-* Cambios nuevos:
- - Agregué otras dos ventanas:
-  + Chakero --> Noticias
-  + Bentorriyo --> Tienda
- - Agreué la informacion que faltaba: 
-  + Descripcion
-  + Origen
-  + Antecedentes
+* Cambio en Creditos:
+  -
+* Cambio home:
+  - He cambiado el footer, por uno que ya vuetify tiene implementado.
+  - Eliminé clases css innecesarias.

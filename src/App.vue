@@ -13,31 +13,68 @@ div#app
     span.navbar-toggler-icon
    div.collapse.navbar-collapse#navbarNav
     div.navbar-nav
-     router-link.nav-item.nav-link#router(to='/') Inicio
-     router-link.nav-item.nav-link#router(to='/diccionario') Diccionario
-     router-link.nav-item.nav-link#router(to='/curso') Curso
-     router-link.nav-item.nav-link#router(to='/chakero' title="Noticias") Chakero 
-     router-link.nav-item.nav-link#router(to='/bentorriyo' title="Tienda/Store") Bentorriyo 
-     router-link.nav-item.nav-link#router(to='/creditos') Creditos 
+      router-link.nav-item.nav-link#router(
+        v-for="(info, index) in links" 
+        :to="info.to" 
+        :title="info.title"
+      ) {{info.name}} 
   router-view
-  div#informacion.row
-    div#universidad.col-sm
-      div#logoUniversidad
-        img(src="https://i.ibb.co/HdbCKKp/Uninorte.png" style="height: 100%; width: 12%")
-      div
-       label Universidad del Norte
-      div
-       label Barranquilla - Colombia
-    div#grupoEstudiantil.col-sm
-      div
-        img(src="https://i.ibb.co/StnCxkv/image1.jpg" style="height: 100%; width: 50%")
-      div(style="margin-top: 10px")
-        label Creador
+  v-footer(
+    height="auto"
+    color="grey darken-4"
+    dark
+  )
+    v-container(
+      grid-list-lg
+      grid-list-md
+    )
+      v-layout(row wrap)
+        v-flex
+          v-btn(
+            class="btn"
+            text
+            icon
+            v-for="(info, index) in socialmedias"
+            :href="info.link"
+            target="_blank"
+            :key="index"
+          )
+            v-icon(color="#dba238") {{info.icon}} 
+      v-layout(wrap row justify-content-center)
+        v-flex(xs12 sm4)
+          v-img(
+            src="https://i.ibb.co/KmGG4H8/Logo-Uninorte-Bquilla.jpg"
+            max-width="50%"
+            max-height="100%"
+            style="border-radius: calc(.5vw + .5vh); margin: auto"
+          )
+        v-flex(xs12 sm4 style="margin-top:25px")
+          v-img(
+            src="https://i.ibb.co/StnCxkv/image1.jpg"
+            max-width="80%"
+            max-height="100%"
+            style="border-radius: calc(.5vw + .5vh); margin: auto"
+          )
 </template>
 
 <script>
 export default {
-  name:"App"
+  name:"App",
+  data: () => ({
+    socialmedias:[
+      { link: "https://www.instagram.com/kribicultura/", icon: "mdi-instagram" },
+      { link:"", icon: "mdi-facebook" },
+      { link:"", icon: "mdi-twitter" },
+    ],
+    links: [
+      { to: "/", name: "Inicio", title:"" },
+      { to: "/diccionario", name: "Diccionario", title:"" },
+      { to: "/curso", name: "Curso", title:"" },
+      { to: "/chakero", name: "Chakero", title:"Noticias"},
+      { to: "/bentorriyo", name: "Bentorriyo", title:"Tienda / Store"},
+      { to: "/creditos", name: "Creditos" },
+    ]
+  })
 }
 </script>
 
@@ -60,22 +97,6 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #8c3420;
-}
-
-#app > #informacion{
-  background: #3b3b3b;
-  height: calc(30vh + 10vw);
-}
-
-#universidad, #grupoEstudiantil, #desarrollador{
-  text-align: center;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-#informacion label{
-  font-size: calc(0.5em + 0.5vw);
-  color: white;
 }
 
 #router {

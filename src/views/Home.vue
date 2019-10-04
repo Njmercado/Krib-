@@ -50,6 +50,12 @@ export default {
 </script>
 
 <style>
+
+  :root{
+    --krbi-red:  #8c3420;
+    --kribi-yellow: #dba238;
+  }
+
   #imagenInicio{
     height: 100%;
     width: 100%;
@@ -80,7 +86,7 @@ export default {
 
   #texto{
     text-align: center;
-    color: #dba238;
+    color: var(--kribi-yellow);
     margin-top: 5px;
     vertical-align: middle;
   }

@@ -1,5 +1,5 @@
-* Cambio en Creditos:
-  -
-* Cambio home:
-  - He cambiado el footer, por uno que ya vuetify tiene implementado.
-  - Eliminé clases css innecesarias.
+Home:
+* Cambios en toda la ventana principal:
+  * Rehacer todo la vista principal.
+  * La vista del diccionario se pierde, para unirse con la principal
+Iclusion de el NavBar y el SideBar para tener una mejor vista

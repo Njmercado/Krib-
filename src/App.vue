@@ -4,7 +4,7 @@
       :routes="links"  
     ></NavBar>
     <router-view 
-      style="margin-top: 35vh"
+      style="margin-top: 6em"
     ></router-view>
     <v-footer 
       height="auto" 
@@ -22,8 +22,8 @@
           <v-flex>
             <v-btn 
               class="btn" 
-              text="text" 
-              icon="icon" 
+              text 
+              icon 
               v-for="(info, index) in socialmedias" 
               :href="info.link" 
               target="_blank" 
@@ -86,11 +86,11 @@ export default {
       { link:"", icon: "mdi-twitter" },
     ],
     links: [
-      {name: "Inicio", to: "/", icon: "mdi-help-box", title:""},
-      {name: "Curso", to: "/curso", icon: "mdi-gesture", title:""},
-      {name: "Bentorriyo", to: "/bentorriyo", icon: "mdi-shape-plus", title:"Tienda / Store"},
-      { to: "/chakero", name: "Chakero", title:"Noticias"},
-      { to: "/creditos", name: "Creditos", title:""},
+      {name: "Inicio", to: "/", icon: "mdi-home", title:""},
+      {name: "Curso", to: "/curso", icon: "mdi-teach", title:""},
+      {name: "Bentorriyo", to: "/bentorriyo", icon: "mdi-cart", title:"Tienda / Store"},
+      { to: "/chakero", name: "Chakero", title:"Noticias", icon: "mdi-newspaper"},
+      { to: "/creditos", name: "Creditos", title:"", icon: "mdi-account-group"},
     ]
   }),
   components:{

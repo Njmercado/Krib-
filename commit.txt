@@ -1,5 +1,9 @@
 Home:
-* Cambios en toda la ventana principal:
-  * Rehacer todo la vista principal.
-  * La vista del diccionario se pierde, para unirse con la principal
-Iclusion de el NavBar y el SideBar para tener una mejor vista
+  * Cambios en toda la ventana principal:
+    * Terminé toda la ventana principal, agregando el diccionario en el home.
+    * Tuve que cambiar la opcion de autocompletado, porque al estar usando un text-field la forma de obtener la información que se escribe ahí, se debe obtener por medio de un v-model
+  * Cambios en el componente modal:
+    * Los 'Slots' ahora no se pueden hacer como los tenia, porque deben estar dentro de un template.
+    * El llamado al modal ya no se hará por medio de un v-card, ahora es por medio de un v-icon.
+    * La activación del modal se hará por medio de un 'prop', y desde la funcion 'mostrarModal' y este, dentro de si, tendrá un watch para abrir y cerrarlo.
+  * Cambios en la ventana 'Diccionario.vue', esta pestaña ya no existirá, porque el diccionario estará dentro del 'Home'

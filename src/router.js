@@ -12,14 +12,14 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    {
-      path: '/diccionario',
-      name: 'Diccionario',
+    //{
+      //path: '/diccionario',
+      //name: 'Diccionario',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Diccionario.vue')
-    },
+      //component: () => import(/* webpackChunkName: "about" */ './views/Diccionario.vue')
+    //},
     {
       path:'/curso',
       name: 'Curso',
@@ -28,7 +28,8 @@ export default new Router({
     {
       path: '/chakero',
       name: 'Chakero',
-      component: () => import('./views/Noticias.vue')
+      //component: () => import('./views/Noticias.vue')
+      component: () => import('./views/templateOnDevelopPage.vue')
     },
     {
       path: '/creditos',
@@ -38,7 +39,8 @@ export default new Router({
     {
       path: '/bentorriyo',
       name: 'Bentorriyo',
-      component: () => import('./views/Tienda.vue')
+      //component: () => import('./views/Tienda.vue')
+      component: () => import('./views/templateOnDevelopPage.vue')
     },
     { 
       path: '*', 

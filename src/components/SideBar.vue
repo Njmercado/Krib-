@@ -12,7 +12,7 @@
       >
         <v-list-item-group 
           v-model="items"
-          active-class="deep-purple--text 
+          active-class="brown--text 
                         text--accent-4"
           class="adjust-font"
         >

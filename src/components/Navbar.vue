@@ -3,20 +3,16 @@
     <v-app-bar 
       dark 
       app 
-      shrink-on-scroll
-      scroll-threshold="300"
       src="https://i.ibb.co/zQGmWnT/Captura-de-pantalla-de-2019-10-04-23-44-25.png"
-      >
+    >
       <v-app-bar-nav-icon 
         @click="openCloseSideBar = !openCloseSideBar" 
-        class="hidden-md-and-up"
+        class="hidden-md-and-up btn"
       >
       </v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
-      <v-toolbar-title
-        style="margin-top:auto; margin-bottom: auto"
-      >
+      <v-toolbar-title>
         <v-img src="https://i.ibb.co/FzDP6PW/Sin-t-tulo-2.png" width="15vw"></v-img>
       </v-toolbar-title>
       <v-spacer></v-spacer>

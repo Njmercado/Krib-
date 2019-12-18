@@ -1,9 +1,10 @@
 <template >
   <div>
     <v-app-bar 
+      src="https://i.ibb.co/zQGmWnT/Captura-de-pantalla-de-2019-10-04-23-44-25.png"
       dark 
       app 
-      src="https://i.ibb.co/zQGmWnT/Captura-de-pantalla-de-2019-10-04-23-44-25.png"
+      hide-on-scroll
     >
       <v-app-bar-nav-icon 
         @click="openCloseSideBar = !openCloseSideBar" 
@@ -12,36 +13,49 @@
       </v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
+
       <v-toolbar-title>
-        <v-img src="https://i.ibb.co/FzDP6PW/Sin-t-tulo-2.png" width="15vw"></v-img>
+        <v-img 
+          src="https://i.ibb.co/FzDP6PW/Sin-t-tulo-2.png" 
+          width="8em"></v-img>
       </v-toolbar-title>
+
       <v-spacer></v-spacer>
 
-      <template v-slot:extension
+      <template
+        v-slot:extension
       >
+        
         <v-tabs
           background-color="transparent"
-        :v-if="openCloseSideBar"
-        >
-          <v-tab 
-            v-for="(route, index) in routes"
-            :key="index"
-            :to="route.to"
-            class="text-capitalize hidden-sm-and-down"
-            :title="route.title"
+        > 
+          <v-row
+            justify="center"
           >
-            {{route.name}}
-          </v-tab>
+            <v-col
+              v-for="(route, index) in routes"
+            >
+              <v-btn
+                :key="index"
+                :to="route.to"
+                :title="route.title"
+                text
+                style="text-decoration: none; font-weight: bold"
+              >
+                {{route.name}}
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-tabs>
       </template>
     </v-app-bar>    
 
-   <SideBar 
+    <SideBar 
       v-if="openCloseSideBar"
       :routes="routes" 
       v-bind:openCloseSideBar.sync="openCloseSideBar"
     >
-   </SideBar>
+    </SideBar>
   </div>
 </template>
 
@@ -57,6 +71,22 @@ export default {
   data(){
     return{
       openCloseSideBar: false,
+    }
+  },
+  mounted(){
+
+    //Identifica si la página se ha abierto en un pc o un 
+    //Dispositivo móvil
+    var isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+
+    if(isMobile){
+      //Este div es el que permite agregar los link en el navbar.
+      //Busco este div porque debo quitarlo para cuanto se ingrese
+      //A la página desde un dispositivo movil, ya que este se mantenia
+      //Pero no se usaba. Ademas de que quedaba espacio vacio que hacia
+      //Ver el NavBar más alto pero vacio.
+      var div = document.querySelector('div.v-toolbar__extension')
+      div.style.height = '0px'
     }
   },
   computed:{

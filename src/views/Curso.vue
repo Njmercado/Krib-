@@ -1,23 +1,62 @@
-<template lang="pug">
-  v-app#background
-    v-container(fill-height)
-      v-layout(justify-center align-center row )
-        v-flex(xs11 sm10 lg6 xl6)
-          v-card(color="#8c3420")
-            v-card-text.color(@click="descargarCurso") Curso introductorio al Palenque, para quienes quieren adentrarse en la cultura palenquera. Haz clic encima de esta información y el curso será descargado en breve. 
+<template>
+  <v-container
+    fluid
+    grid-list-md
+    grid-list-lg
+  >
+    <v-row
+      wrap
+      justify="center"
+    >
+      <v-col
+        cols="12"
+        md="4"
+        sm="6"
+        xs="12"
+        lg="3"
+        d-flex
 
+        v-for="(game, index) in games"
+        :key="index"
+      >
+        <Game :img="game.img" :desc="game.desc" :link="game.link" :title="game.title" :wordGame="game.wordGame"></Game>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 import Server from '../serverConfigurations'
+import Game from '../components/Game.vue'
 
 export default {
   name:"Curso",
+  data: () => ({
+    games: [
+      {
+        link: "https://tinycards.duolingo.com/", 
+        img: "https://i.ibb.co/NTLMGQL/Dhdy-f-Jr-400x400.jpg", 
+        title: "Tiny Cards", 
+        desc:"description",
+      },
+      {
+        link: null, 
+        img: "https://i.ibb.co/NTLMGQL/Dhdy-f-Jr-400x400.jpg", 
+        title: "Sopa de letras", 
+        desc:"Juego de sopa de letras",
+        wordGame:"true"
+      },
+    ] 
+  }),
   methods:{
     descargarCurso: () => {
-    
+
+      //TODO: modificar el servidor para evitar la descarga del curso
       Server.descargarCurso()
     }
+  },
+  components:{
+    Game
   }
 }
 
@@ -25,14 +64,9 @@ export default {
 
 
 <style>
-  
-.color{
-  color: #d99b29;
-  cursor: pointer;
-}
 
 #background{
-  
+
   background-image: url('https://i.ibb.co/K6KTnGx/curso.jpg')
 }
 </style>

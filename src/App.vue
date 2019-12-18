@@ -15,11 +15,8 @@
         grid-list-lg 
         grid-list-md
       >
-        <v-layout 
-          row 
-          wrap
-        >
-          <v-flex>
+        <v-row>
+          <v-col>
             <v-btn 
               class="btn" 
               text 
@@ -35,39 +32,43 @@
                 {{info.icon}} 
               </v-icon>
             </v-btn>
-          </v-flex>
-        </v-layout>
-        <v-layout 
-          wrap 
-          row 
-          justify-content-center
+          </v-col>
+        </v-row>
+        <v-row 
+          justify="center"
         >
-          <v-flex 
-            xs12 
-            sm4
+          <v-col 
+            cols="12"
+            align="center"
+            md="3"
+            sm="8"
+            lg="4"
           >
             <v-img 
               src="https://i.ibb.co/KmGG4H8/Logo-Uninorte-Bquilla.jpg" 
               max-width="50%" 
               max-height="100%" 
-              style="border-radius: calc(.5vw + .5vh); margin: auto;"
+              style="border-radius: calc(.5vw + .5vh);;"
             >
             </v-img>
-          </v-flex>
-          <v-flex 
-            xs12 
-            sm4 
+          </v-col>
+          <v-col 
+            cols="12"
+            align="center"
+            md="3"
+            sm="8"
+            lg="4"
             style="margin-top:25px;"
           >
             <v-img 
               src="https://i.ibb.co/StnCxkv/image1.jpg" 
               max-width="80%" 
               max-height="100%" 
-              style="border-radius: calc(.5vw + .5vh); margin: auto;"
+              style="border-radius: calc(.5vw + .5vh);;"
             >
             </v-img>
-          </v-flex>
-        </v-layout>
+          </v-col>
+        </v-row>
       </v-container>
     </v-footer>
   </v-app>

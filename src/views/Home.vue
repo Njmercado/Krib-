@@ -20,12 +20,8 @@
       </div>
         <!-- Letras del diccionario -->
         <v-row
-          row 
-          wrap 
-          justify="center"
           style="background-color: #562011; 
-                 padding-top: 2vh;
-                 padding-bottom: 2vh" 
+                 padding: 2vh;" 
         >
           <v-col
             v-for="(i, index) in letras"

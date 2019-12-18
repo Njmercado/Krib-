@@ -42,9 +42,10 @@ export default new Router({
       //component: () => import('./views/Tienda.vue')
       component: () => import('./views/templateOnDevelopPage.vue')
     },
-    { 
+    /*{ 
       path: '*', 
       redirect: '/' 
     }, // catch all use case
+    */
   ]
 })

@@ -1,9 +1,22 @@
-Home:
-  * Cambios en toda la ventana principal:
-    * Terminé toda la ventana principal, agregando el diccionario en el home.
-    * Tuve que cambiar la opcion de autocompletado, porque al estar usando un text-field la forma de obtener la información que se escribe ahí, se debe obtener por medio de un v-model
-  * Cambios en el componente modal:
-    * Los 'Slots' ahora no se pueden hacer como los tenia, porque deben estar dentro de un template.
-    * El llamado al modal ya no se hará por medio de un v-card, ahora es por medio de un v-icon.
-    * La activación del modal se hará por medio de un 'prop', y desde la funcion 'mostrarModal' y este, dentro de si, tendrá un watch para abrir y cerrarlo.
-  * Cambios en la ventana 'Diccionario.vue', esta pestaña ya no existirá, porque el diccionario estará dentro del 'Home'
+Curso:
+  * Eliminación de lo que se tenia.
+  * Ya no se puede descargar el pdf del curso, ahora será reemplazado por juegos.
+  * Inserción de v-cards que redigirirán a juegos.
+Componentes:
+  * Creación del componente Game, el cual será incluido dentro del View Curso.
+  * Creacion del componente Timer, para realizar un count down en el juego 
+  de la sopa de letras.
+  * Creacion del componente WordGame para la creación de la sopa de letras:
+    * Este componente está dentro de una capeta con su nombre.
+    * La carpeta contiene otros componentes que permiten el desarrollo del juego.
+    * Hay varios componentes para tener esta parte modular y poderla hacer escalable
+NavBar:
+  * Modificación el NavBar para que pudiera verse más centrados los links
+Problemas:
+  * Cuando se está en un celular, en la ventana de inicio, queda un espacio, tanto arriba como abajo, de la imagen de portada.
+Todo:
+  * Conectar todos los componentes de la sopa de letras.
+  * Desarrollar la parte del servidor para el juego.
+  * Incluir el codigo, desarrollado python, para la generación de la sopa de letras.
+  * Realizar el código para poder resolver la sopa de letras.
+

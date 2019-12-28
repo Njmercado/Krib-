@@ -41,16 +41,16 @@ export default {
   data: () => ({
     games: [
       {
-        link: "https://tinycards.duolingo.com/", 
-        img: "https://i.ibb.co/NTLMGQL/Dhdy-f-Jr-400x400.jpg", 
-        title: "Tiny Cards", 
-        desc:"Juegos de cartas para poder vizualizar y escuchar todas las palabras que ahí se encuentran",
+        link: "https://quizlet.com/co/448615742/luenga-ri-palenge-flash-cards/?x=1jqt", 
+        img: "https://i.ibb.co/Sy1hFrc/quizlet.jpg", 
+        title: "Quizlet", 
+        desc:"Práctica y juega mientras aprendes lengua palenquera",
       },
       {
         link: null, 
         img: "https://i.ibb.co/b3bFz6z/words-Game.png", 
         title: "Sopa de letras", 
-        desc:"Juego de sopa de letras, en el que podrás pasar niveles pero siempre con la expectativa de obtener el mayor puntaje en el menor tiempo posible",
+        desc:"Encuentra la mayor cantidad de palabras en el menor tiempo posible!!!",
         wordGame:"true"
       },
     ] 

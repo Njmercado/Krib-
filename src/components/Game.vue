@@ -1,12 +1,9 @@
 <template>
   <v-card
-    max-width="80%"
     style="border-radius: 20px; margin: auto;"
   >
     <v-img 
       :src="img" 
-      height="auto" 
-      width="auto"
     ></v-img>
 
     <v-card-title>
@@ -14,7 +11,9 @@
     </v-card-title>
 
     <v-card-text>
+      <label style="text-align: left">
       {{desc}}
+      </label>
     </v-card-text>
 
     <v-card-actions>

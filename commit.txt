@@ -1,8 +1,4 @@
-Sopa de Letras:
-  * Ya está terminado el juego.
-  * Eliminacion del componente WordRecords, ya que era completamente inutil.
-  * Mejora de la vista --> una para pc y otra para movil.
-  * Las palabras seleccionadas se rezaltarán en color aleatorio.
-  * La zona de muestra de la las letras escogidas, WordRecords, ya no existe --> inutil.
-  * Los puntos están dados por la cantidad de palabras encontradas.
-  * Cuando se terminan de encontrar las palabras, se pasa al siguiente nivel.
+Curso(View):
+  * El juego de tiny cards fue reemplazado por quizlet
+Home(View):
+  * Quité el margin que estaba entre la imagen y la descripcion 

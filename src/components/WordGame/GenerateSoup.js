@@ -17,14 +17,14 @@ export default class WordGame{
   }
 
   getGrid(){
-    /*for(var i=0; i < this.cols; i++){
+    for(var i=0; i < this.cols; i++){
       for(var j =0; j<this.cols;j++){
         if(this.grid[i][j] == "."){
           const index = this.random(1, this.abc.length-1)
           this.grid[i][j] = this.abc[index] 
         }
       }
-    }*/
+    }
     return this.grid
   }
 

@@ -7,7 +7,7 @@
     </div>
     <div id="contenido">
       <div id="contenedor">
-        <div id="texto" style="margin-bottom: 5vh">
+        <div id="texto">
           <label class="tituloDescripcion">DICCIONARIO PALENQUERO</label>
           <div>
             <label class="contenidoDescripcion">

@@ -41,7 +41,7 @@
     props:[
       'minutes',
       'seconds',
-      'stop',
+      'reset',
       'color'
     ],
     mounted(){
@@ -63,7 +63,7 @@
       }
     },
     watch:{
-      stop(){
+      reset(){
         clearInterval(this.interval)
       }
     },

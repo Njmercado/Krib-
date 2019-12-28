@@ -2,21 +2,19 @@
   <v-row
     style="background-color: #E0E0E0; 
            border-radius: 10px;
-           height: auto;
-           margin-bottom: 5vh;"
+           margin-bottom: 5vh;
+           padding: 1vh"
     >
-      <v-btn 
-        v-for="(word, index) in words" 
-        :key="word"
-        style="margin: 1vh"
-        class="btn"
+      <v-chip
+        v-for="(word, index) in finalWords" 
+        :key="index"
+        style="margin: .1vh;"
         color="#e09518"
         dark
         small
-        rounded
       >
-        {{word}}
-      </v-btn>
+        {{word.palabra}}
+      </v-chip>
     </v-row>
 </template>
 
@@ -27,17 +25,25 @@ export default {
   name: "WordList",
   props:[
     "words",
+    "deleteWord"
   ],
-  methods:{
-
+  data: () => ({
+    finalWords: []
+  }),
+  watch: {
+    deleteWord(val){
+      this.finalWords = this.finalWords.filter(el => el.palabra != val)
+    },
+    words(val){
+      this.finalWords = val
+    },
+    finalWords(val){
+      if(val.length == 0){
+        this.$emit("nextLevel", true)
+      }else{
+        this.$emit("nextLevel", false)
+      }
+    }
   },
-  components:{
-
-  }  
 } 
 </script>
-
-<style scoped>
-
-</style>
-

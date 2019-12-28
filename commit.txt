@@ -1,22 +1,8 @@
-Curso:
-  * Eliminación de lo que se tenia.
-  * Ya no se puede descargar el pdf del curso, ahora será reemplazado por juegos.
-  * Inserción de v-cards que redigirirán a juegos.
-Componentes:
-  * Creación del componente Game, el cual será incluido dentro del View Curso.
-  * Creacion del componente Timer, para realizar un count down en el juego 
-  de la sopa de letras.
-  * Creacion del componente WordGame para la creación de la sopa de letras:
-    * Este componente está dentro de una capeta con su nombre.
-    * La carpeta contiene otros componentes que permiten el desarrollo del juego.
-    * Hay varios componentes para tener esta parte modular y poderla hacer escalable
-NavBar:
-  * Modificación el NavBar para que pudiera verse más centrados los links
-Problemas:
-  * Cuando se está en un celular, en la ventana de inicio, queda un espacio, tanto arriba como abajo, de la imagen de portada.
-Todo:
-  * Conectar todos los componentes de la sopa de letras.
-  * Desarrollar la parte del servidor para el juego.
-  * Incluir el codigo, desarrollado python, para la generación de la sopa de letras.
-  * Realizar el código para poder resolver la sopa de letras.
-
+Sopa de Letras:
+  * Ya está terminado el juego.
+  * Eliminacion del componente WordRecords, ya que era completamente inutil.
+  * Mejora de la vista --> una para pc y otra para movil.
+  * Las palabras seleccionadas se rezaltarán en color aleatorio.
+  * La zona de muestra de la las letras escogidas, WordRecords, ya no existe --> inutil.
+  * Los puntos están dados por la cantidad de palabras encontradas.
+  * Cuando se terminan de encontrar las palabras, se pasa al siguiente nivel.

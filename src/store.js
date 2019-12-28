@@ -12,6 +12,7 @@ export default new Vuex.Store({
     ejemplos: [],
     listaPalabras: [],
     letra: '',
+    randomWords: ''
   },
   mutations: {// Sirve para actualizar/cambiar informacion de las variables declaradas arriba(state)
 
@@ -50,6 +51,16 @@ export default new Vuex.Store({
       }
       
     },
+    setRandomWords(state, numeroPalabras){
+
+      Server.palabrasRandom(numeroPalabras).then(result => {
+
+        state.randomWords = result.map(el => ({ 
+          palabra: el.palabra.toLowerCase(),
+          definicion: el.definicion.toLowerCase()
+        }))
+      })
+    }
   },
   getters:{
     getEjemplos: state => state.ejemplos,
@@ -57,5 +68,6 @@ export default new Vuex.Store({
     getPalabra: state => state.palabra,
     getPalabrasPorLetra: state => state.listaPalabras,
     getLetra: state => state.letra,
+    getRandomWords: state => state.randomWords,
   }
 })

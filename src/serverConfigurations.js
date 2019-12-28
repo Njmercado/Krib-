@@ -3,7 +3,7 @@ import download from 'downloadjs'
 
 const KEY = "5cf2e66408166968da3b30b4"
 const serverName = 'http://167.71.249.170:5000/' 
-//const serverName = 'localhost:5000/' 
+//const serverName = 'http://localhost:5000/' 
 
 class Server {
   
@@ -41,6 +41,12 @@ class Server {
     const result = await axios.get(`${serverName}buscar/palabra/autocompletado?palabra=${value}&key=${KEY}`)
 
     return result.data.response.map(res => ({palabra: res}))
+  }
+  
+  static async palabrasRandom(cantidad){
+
+    const result = await axios.get(`${serverName}buscar/random?cantidad=${cantidad}&key=${KEY}`)
+    return result.data.response
   }
 
 }

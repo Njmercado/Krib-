@@ -19,7 +19,14 @@
         v-for="(game, index) in games"
         :key="index"
       >
-        <Game :img="game.img" :desc="game.desc" :link="game.link" :title="game.title" :wordGame="game.wordGame"></Game>
+        <Game 
+          :img="game.img" 
+          :desc="game.desc" 
+          :link="game.link" 
+          :title="game.title" 
+          :wordGame="game.wordGame"
+        >
+        </Game>
       </v-col>
     </v-row>
   </v-container>
@@ -37,13 +44,13 @@ export default {
         link: "https://tinycards.duolingo.com/", 
         img: "https://i.ibb.co/NTLMGQL/Dhdy-f-Jr-400x400.jpg", 
         title: "Tiny Cards", 
-        desc:"description",
+        desc:"Juegos de cartas para poder vizualizar y escuchar todas las palabras que ahí se encuentran",
       },
       {
         link: null, 
-        img: "https://i.ibb.co/NTLMGQL/Dhdy-f-Jr-400x400.jpg", 
+        img: "https://i.ibb.co/b3bFz6z/words-Game.png", 
         title: "Sopa de letras", 
-        desc:"Juego de sopa de letras",
+        desc:"Juego de sopa de letras, en el que podrás pasar niveles pero siempre con la expectativa de obtener el mayor puntaje en el menor tiempo posible",
         wordGame:"true"
       },
     ] 

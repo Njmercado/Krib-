@@ -1,4 +1,8 @@
 Curso(View):
-  * El juego de tiny cards fue reemplazado por quizlet
-Home(View):
-  * Quité el margin que estaba entre la imagen y la descripcion 
+  * Arreglé lo que faltaba para la sopa de letras:
+    - Comenzar el juego solo cuando se presiona el botón start del timer.
+    - Dejar de seleccionar palabras cuando el tiempo llega a 0.
+    - aumentar la cantidad de palabras a buscar a 10
+Noticias(View):
+  * Creación del componente News para poder mostrar noticias en la página.
+  * Las noticias se verán en un v-dialog con la ayuda de un iframe para mostrar la información.

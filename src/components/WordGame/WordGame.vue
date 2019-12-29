@@ -35,6 +35,7 @@
               :words = 'randomWords'
               @selectedWord="selectedWordHandler" 
               @wordsFound="foundWordsHandler"
+              :disabled="startGame"
             >
             </Soup>
 
@@ -47,10 +48,12 @@
               xl="3"
             >
               <Timer 
-                :minutes="0" 
-                :seconds="10" 
+                :minutes="5" 
+                :seconds="0" 
                 :reset="resetTimer"
-                color="#E0E0E0">
+                color="#E0E0E0"
+                @start="startHandler"
+              >
               </Timer>
 
               <WordList 
@@ -95,6 +98,7 @@
       selectedWord: '',
       foundWords: 10,
       closeWordGameModal: false,
+      startGame: false
     }),
     watch: {
       open: function(val){
@@ -102,7 +106,7 @@
 
         //Cada vez que se abra este modal se generará una nueva sopa de letras
         //Por ende es necesario llamar esta funcion desde acá
-        this.setRandomWords(2)
+        this.setRandomWords(10)
       },
       closeWordGameModal(){
         this.selectedWord = ''
@@ -131,8 +135,11 @@
       },
       nextLevelHandler(val){
         if(val){
-          this.setRandomWords(4)
+          this.setRandomWords(10)
         }
+      },
+      startHandler(val){
+        this.startGame = val
       }
     },
     components:{

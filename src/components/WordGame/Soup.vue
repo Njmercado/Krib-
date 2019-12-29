@@ -4,7 +4,11 @@
       style="background-color: #E0E0E0;
              border-radius: 10px;"
     >
-      <v-row v-for="(row, i) in gridSoup" :key="i" justify="center">
+      <v-row 
+        v-for="(row, i) in gridSoup" 
+        :key="i" 
+        justify="center"
+      >
         <label
           v-for="(val, j) in row" 
           :key="j" 
@@ -14,9 +18,6 @@
           class="btn letter"
           color="#e09518"
           :id="getId(i,j)"
-          small 
-          fab
-          text
         >
           {{ val }}
         </label>
@@ -33,7 +34,8 @@ export default {
 
   name: "Soup",
   props:[
-    'words'
+    'words',
+    "disabled"
   ],
   data: () => ({
     gridSoup: [],
@@ -70,16 +72,19 @@ export default {
       }
     },
     mouseDown(val, i, j){
-      this.hasClickOnLetter = true
-      this.selectedWord = val 
+      if(this.disabled){
 
-      this.randomColor = this.getRandomColor()
+        this.hasClickOnLetter = true
+        this.selectedWord = val 
+
+        this.randomColor = this.getRandomColor()
      
-      const button = document.querySelector("#"+this.getId(i, j))
-      button.style.backgroundColor=this.randomColor
+        const button = document.querySelector("#"+this.getId(i, j))
+        button.style.backgroundColor=this.randomColor
 
-      this.xAxis.push(i) 
-      this.yAxis.push(j)
+        this.xAxis.push(i) 
+        this.yAxis.push(j)
+      }
     },
     mouseUp(){
       this.hasClickOnLetter = false
@@ -143,5 +148,6 @@ export default {
   height: calc(1vh + 1vw + .6em); 
   padding: auto;
   font-weight: bold;
+  color: #d69d20;
 }
 </style>

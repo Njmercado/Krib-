@@ -29,7 +29,7 @@ export default new Router({
       path: '/chakero',
       name: 'Chakero',
       //component: () => import('./views/Noticias.vue')
-      component: () => import('./views/templateOnDevelopPage.vue')
+      component: () => import('./views/Noticias.vue')
     },
     {
       path: '/creditos',

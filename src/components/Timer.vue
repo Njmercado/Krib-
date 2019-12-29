@@ -37,6 +37,7 @@
       interval: 0,
       warnings: [ 'green darken-2', 'yellow darken-3', 'orange darken-3', 'deep-orange darken-3', 'red darken-4' ],
       warning: '',
+      startGame: false
     }),
     props:[
       'minutes',
@@ -55,6 +56,11 @@
         if(this.realTimer <= 50) this.warning = this.warnings[2]
         if(this.realTimer <= 25) this.warning = this.warnings[3]
         if(this.realTimer <= 10) this.warning = this.warnings[4]
+        if(this.realTimer == 0){
+          clearInterval(this.interval)
+          this.startGame = false
+          this.$emit("start", this.startGame)
+        }
 
         return this.realTimer
       },
@@ -65,18 +71,23 @@
     watch:{
       reset(){
         clearInterval(this.interval)
+        this.startGame = false
       }
     },
     methods:{
       start(){
         
-        var duration = (this.minutes*60 + this.seconds)*1000/100
-        console.log(duration)
-
-        this.realTimer = 100
-        this.interval = setInterval(()=>{
-          if(this.realTimer-- == 0) this.realTimer = 100
-        }, duration)
+        if(!this.startGame){
+          var duration = (this.minutes*60 + this.seconds)*1000/100
+          this.startGame = true
+          console.log("hola")
+          this.$emit("start", this.startGame)
+  
+          this.realTimer = 100
+          this.interval = setInterval(()=>{
+            if(this.realTimer-- == 0) this.realTimer = 100
+          }, duration)
+        }
       }
     },
     components:{

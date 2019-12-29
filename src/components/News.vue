@@ -9,9 +9,20 @@
         >
           <v-card-title>
             <label
-              style="text-align: start; font-weight: 800; color: lightgrey"
-            >{{title}}</label>
-          </v-card-title>
+              style="text-align: start; font-weight: 800; color: lightgrey; font-size: .9em"
+            >
+              {{title}}
+            </label>
+          </v-card-title> 
+          <div style="text-align: start; 
+                      margin-left: 1em;
+                      margin-top: -2vh; 
+                      margin-bottom: 2vh; 
+                      color: lightgrey; 
+                      font-size: .9em"
+          >
+            {{author}}
+          </div>
         </v-img>
       </v-card>
     </template>
@@ -25,18 +36,15 @@
 </template>
 
 <script>
-  import pdf from "vue-pdf"
   export default {
 
     name: "News",
     props:[
       "photo",
       "title",
-      "data"
+      "data",
+      "author"
     ],
-    components: {
-      pdf
-    }
   } 
 </script>
 

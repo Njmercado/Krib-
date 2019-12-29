@@ -20,6 +20,7 @@
           :photo="news.photo" 
           :data="news.data" 
           :title="news.title"
+          :author="news.author"
         ></News>
       </v-col>
     </v-row>
@@ -34,7 +35,7 @@ import News from "../components/News.vue"
     name: "Noticias",
     data: () =>  ({
       news: [
-        { photo: "https://i.ibb.co/2stKXZC/Las-alzan-sus-voces-21-de-diciembre-2019.jpg", title:"Jovenes con vision 2020", data: "http://drive.google.com/file/d/18CxrKsaSDUU-px7Cr7mwPPNFj3GDnfT_gHVEFU_fSqg/preview" },
+        { photo: "https://i.ibb.co/2stKXZC/Las-alzan-sus-voces-21-de-diciembre-2019.jpg", title:"Jovenes con vision 2020", data: "http://drive.google.com/file/d/18CxrKsaSDUU-px7Cr7mwPPNFj3GDnfT_gHVEFU_fSqg/preview", author:"Cristina De la Hoz Marquez" },
       ]
     }),
     methods:{

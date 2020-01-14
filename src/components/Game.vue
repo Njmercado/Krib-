@@ -3,6 +3,7 @@
     style="border-radius: 20px; margin: auto;"
   >
     <v-img 
+      style="height: 16em"
       :src="img" 
     ></v-img>
 

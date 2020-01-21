@@ -1,23 +1,6 @@
 Modificaciones:
-  General:
-    + Google Analitics agregado
-    + He agregado los iconos de Google.
-    - He elimado jquery, ya no es necesario.
-    - Elimanda la ruta para realizar el request de descarga de curso
-    - Elimando el paquete downloadjs
   Componentes:
-    * Creador:
-      + Cambiado su diseño.
-      + El boton para desplegar la información ahora está centrado.
-      + Las fuentes ahora son un poco más legibles.
-      + Ahora para tamaño de pantalla convencional, 14 pulgadas, los creditos se ven un poco más grandes.
-      + Las imagenes ahora son del mismo tamaño.
-      + Los iconos de los botones ahora se cambian dependiendo si la información haya sido desplegada o no.
-    * Sidebar:
-      + Arreglado este componente para que no sea necesario el presionar dos veces el boton de menu para poder abrirlo.
-    + Footer:
-      + Creado componente Footer.
-      + Este componente estaba, como codigo suelto, en la vista principal, lo convierto en componente para tener más control sobre el.
-Errores:
-  * Home:
-    + Espacio entre el NavBar y la imagen de inicio, en celulares, aun se mantiene, pero ahora es un poco más pequeña.
+    * Modal:
+      + Ahora las palabras pueden ver los ejemplos que las palabras tienen
+      + Ahora se puede ver el idioma al cual la palabra pertenece
+      + Ahora las definiciones se ven como chips

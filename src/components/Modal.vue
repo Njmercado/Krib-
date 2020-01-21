@@ -1,34 +1,38 @@
 <template>
-  <v-dialog max-width='60vw'>
+  <v-dialog max-width='60em'>
     <template v-slot:activator='{ on }'>
       <v-icon v-on='on' ref='activate'></v-icon>
     </template>
     <v-card>
+     <div class="idioma">
+        {{idioma}}
+     </div>
       <v-card-title class='titulo'>
-        <v-col justify='center'>
+        <v-row justify='center'>
           <div id='titulo' class='white--text'>
             {{palabra}}
           </div>
-        </v-col>
+        </v-row>
       </v-card-title>
       <v-card-text>
         <v-container>
-          <v-row
-            class='white--text definicion'
-            justify='center'
-            align='center'
-            wrap
+          <v-chip 
+            class="ma-2"
+            color="#d99b29"
+            v-for="(def, index) in definicion" 
+            :key="index"
+            dark
           >
-            {{definicion}}
-          </v-row>
+            {{def}}
+          </v-chip>
           <v-row
-            v-for='(i,index) in ejemplos'
+            v-for='(ejemplo,index) in ejemplos'
             :key='index'
             class='white--text ejemplo'
             justify='center'
             align='center'
           >
-            {{i.ejemplo}}
+            {{ejemplo}}
           </v-row>
         </v-container>
       </v-card-text>
@@ -43,7 +47,8 @@ export default {
     'open',
     'ejemplos',
     'definicion',
-    'palabra'
+    'palabra',
+    'idioma'
   ],
   watch: {
     open (val) {
@@ -58,23 +63,30 @@ export default {
 
 .titulo{
   background:#8c3420;
-  height: 15vh;
+  height: 8vh;
   font-size: 2vw;
 }
 
+.idioma {
+  background:#8c3420;
+  color: white;
+  text-align: left;
+  padding: .5em .5em .5em .5em;
+  border-style: hidden; 
+}
+
 .definicion{
-  background: #d99b29;
   height: 5vh;
   border-radius: 1vw;
-  font-size: calc(0.7em + 0.5vw);
+  font-size: 1em;
 }
 
 .ejemplo{
-  background: #bfbeaa;
+  background: darkgrey;
   margin-top: 2vw;
   height: 5vh;
   border-radius: 1vw;
-  font-size: calc(0.60em + 0.5vw);
+  font-size: 1.2em;
 }
 
 </style>

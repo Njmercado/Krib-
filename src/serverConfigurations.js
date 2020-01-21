@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-// const serverName = 'http://167.71.249.170:5000/'
-const serverName = 'http://localhost:5000/'
+const serverName = 'http://167.71.249.170:5000/'
+// const serverName = 'http://localhost:5000/'
 
 class Server {
   static async getPalabrasPorLetra (letra) {
@@ -13,9 +13,10 @@ class Server {
   static async buscarPalabra (palabra) {
     const result = await axios.get(`${serverName}buscar/palabra?palabra=${palabra}&key=${KEY}`)
     return {
-      definicion: result.data.definicion,
+      definicion: result.data.definicion.split("/"),
       ejemplos: result.data.ejemplos,
-      palabra: result.data.palabra
+      palabra: result.data.palabra,
+      idioma: result.data.idioma
     }
   }
 

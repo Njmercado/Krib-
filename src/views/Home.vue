@@ -118,6 +118,7 @@
       :palabra='getPalabra'
       :ejemplos='getEjemplos'
       :definicion='getDefinicion'
+      :idioma='getIdioma'
     >
     </Modal>
   </div>
@@ -144,7 +145,8 @@ export default {
       'getAutoCompletado',
       'getPalabra',
       'getDefinicion',
-      'getEjemplos'
+      'getEjemplos',
+      'getIdioma',
     ])
   },
   watch: {

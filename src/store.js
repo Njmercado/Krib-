@@ -13,11 +13,12 @@ export default new Vuex.Store({
     idioma: 'Espanol',
     listaPalabras: [],
     letra: '',
-    randomWords: ''
+    randomWords: '',
+    articles: []
   },
   mutations: {// Sirve para actualizar/cambiar informacion de las variables declaradas arriba(state)
     setLetraParaPalabras (state, letra) { // Para obtener todas las palabras relacionadas con la letra que se ha seleccionada
-      if (letra.toLowerCase() != state.letra.toLowerCase()) { // Solo va a realizar busqueda cuando se digite una letra diferente
+      if (letra.toLowerCase() !== state.letra.toLowerCase()) { // Solo va a realizar busqueda cuando se digite una letra diferente
         Server.getPalabrasPorLetra(letra).then(result => {
           state.listaPalabras = result
         })
@@ -25,7 +26,7 @@ export default new Vuex.Store({
     },
     async setPalabra (state, palabra) {
       // Si la palabra no ha sido buscada antes.
-      if (palabra.toLowerCase() != state.palabra.toLowerCase()) {
+      if (palabra.toLowerCase() !== state.palabra.toLowerCase()) {
         await Server.buscarPalabra(palabra).then(result => {
           state.palabra = result.palabra
           state.definicion = result.definicion
@@ -50,6 +51,9 @@ export default new Vuex.Store({
           definicion: el.definicion.toLowerCase()
         }))
       })
+    },
+    setArticles (state, articles) {
+      state.articles = articles
     }
   },
   getters: {
@@ -59,6 +63,7 @@ export default new Vuex.Store({
     getIdioma: state => state.idioma,
     getPalabrasPorLetra: state => state.listaPalabras,
     getLetra: state => state.letra,
-    getRandomWords: state => state.randomWords
+    getRandomWords: state => state.randomWords,
+    getArticles: state => state.articles
   }
 })

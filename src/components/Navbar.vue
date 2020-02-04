@@ -1,46 +1,30 @@
-<template >
+<template>
   <div>
     <v-app-bar
       src="https://i.ibb.co/zQGmWnT/Captura-de-pantalla-de-2019-10-04-23-44-25.png"
-      dark
-      app
-      hide-on-scroll
+      dark app hide-on-scroll dense
     >
-      <v-app-bar-nav-icon
-        @click.stop="openCloseSideBar = !openCloseSideBar"
-        class="hidden-md-and-up btn"
-      >
+      <v-app-bar-nav-icon @click.stop="openCloseSideBar = !openCloseSideBar" class="hidden-md-and-up btn">
       </v-app-bar-nav-icon>
-
       <v-spacer></v-spacer>
-
       <v-toolbar-title>
         <v-img
           src="https://i.ibb.co/FzDP6PW/Sin-t-tulo-2.png"
-          width="8em"></v-img>
+          width="6em"></v-img>
       </v-toolbar-title>
-
       <v-spacer></v-spacer>
-
-      <template
-        v-slot:extension
-      >
-        <v-tabs
-          background-color="transparent"
-        >
-          <v-row
-            justify="center"
-          >
-            <v-col
-              v-for="(route, index) in routes"
-              :key="index"
-            >
+      <template v-slot:extension>
+        <v-tabs background-color="red darken-4">
+          <v-row justify="center">
+            <v-col v-for="(route, index) in routes" :key="index">
               <v-btn
+                style="text-decoration: none; font-weight: bold"
+                class="text-capitalize"
                 :key="index"
                 :to="route.to"
                 :title="route.title"
+                small
                 text
-                style="text-decoration: none; font-weight: bold"
               >
                 {{route.name}}
               </v-btn>
@@ -49,12 +33,7 @@
         </v-tabs>
       </template>
     </v-app-bar>
-
-    <SideBar
-      :routes="routes"
-      :open="openCloseSideBar"
-    >
-    </SideBar>
+    <SideBar :routes="routes" :open="openCloseSideBar"></SideBar>
   </div>
 </template>
 

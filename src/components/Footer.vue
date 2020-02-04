@@ -4,10 +4,7 @@
     color='#562011'
     dark
   >
-    <v-container
-      grid-list-lg
-      grid-list-md
-      >
+    <v-container grid-list-lg grid-list-md>
       <v-row>
         <v-col>
           <v-btn
@@ -25,10 +22,7 @@
         </v-col>
       </v-row>
       <v-row justify='center' align='center'>
-        <v-col
-          align='center'
-          cols='12' md='3' sm='8' lg='4'
-          >
+        <v-col align='center' cols='12' md='3' sm='8' lg='4'>
           <v-img
             style='border-radius: 8px;'
             src='https://i.ibb.co/KmGG4H8/Logo-Uninorte-Bquilla.jpg'
@@ -37,10 +31,7 @@
             >
           </v-img>
         </v-col>
-        <v-col
-          align='center'
-          cols='12' md='3' sm='8' lg='4'
-         >
+        <v-col align='center' cols='12' md='3' sm='8' lg='4'>
           <v-img
             style='border-radius: 8px;'
             src='https://i.ibb.co/StnCxkv/image1.jpg'

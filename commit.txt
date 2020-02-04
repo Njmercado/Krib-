@@ -1,6 +1,11 @@
 Modificaciones:
+  General:
+    - Imagen de portada eliminada
+    + La imagen de portada ahora está en cloudinary
   Componentes:
-    * Modal:
-      + Ahora las palabras pueden ver los ejemplos que las palabras tienen
-      + Ahora se puede ver el idioma al cual la palabra pertenece
-      + Ahora las definiciones se ven como chips
+    Word:
+      + Componente creado para poder mostrar las palabras encontradas.
+    CarrouserNews:
+      + Componente creado.
+      + Este componente funciona para mostrar las noticias más nuevas.
+      + Este componente se colocó en la ventana principal, porque al entrar los usuarios por ahí, estos pueden tener conocimiento inmediato de las noticias más relevantes y nuevas, sin necesidad de moverse a la pestaña de noticias. A pesas de mostrar las noticias aquí, estas tambien estarán en su pestaña correspondiente.

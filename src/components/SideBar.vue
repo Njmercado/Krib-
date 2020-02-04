@@ -1,14 +1,6 @@
 <template>
-   <v-navigation-drawer
-      absolute
-      temporary
-      v-model="openClose"
-    >
-      <v-list
-        nav
-        dense
-        rounded
-      >
+   <v-navigation-drawer v-model="openClose" absolute temporary>
+      <v-list nav dense rounded>
         <v-list-item-group
           v-model="items"
           active-class="brown--text text--accent-4"
@@ -28,16 +20,12 @@
             :to="route.to"
           >
             <v-list-item-icon>
-              <v-icon
-              >
+              <v-icon>
                 {{route.icon}}
               </v-icon>
             </v-list-item-icon>
-
             <v-list-item-content>
-              <v-list-item-title
-                class="text-capitalize"
-              >
+              <v-list-item-title class="text-capitalize">
                 {{route.name}}
               </v-list-item-title>
             </v-list-item-content>

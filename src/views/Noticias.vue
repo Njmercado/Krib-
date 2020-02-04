@@ -1,48 +1,40 @@
 <template>
-  <v-container 
-    fluid
-    grid-list-md
-    grid-list-lg
+  <v-container
     style="margin-top: auto; margin-bottom: auto"
+    fluid grid-list-md grid-list-lg
   >
     <v-row justify="center">
-      <v-col 
-        cols="12"
-        xs="12"
-        sm="12"
-        md="6"
-        lg="4"
-        xl="4"
-        v-for="(news, index) in news" 
+      <v-col
+        cols="12" xs="12" sm="12" md="6" lg="4" xl="4"
+        v-for="(news, index) in getArticles"
         :key="index"
       >
-        <News 
-          :photo="news.photo" 
-          :data="news.data" 
+        <News
+          :photo="news.photo"
+          :data="news.link"
           :title="news.title"
           :author="news.author"
         ></News>
       </v-col>
     </v-row>
-  </v-container>    
+  </v-container>
 </template>
 
 <script>
-import News from "../components/News.vue"
-  
-  export default {
+import News from '../components/News.vue'
+import { mapGetters } from 'vuex'
+export default {
 
-    name: "Noticias",
-    data: () =>  ({
-      news: [
-        { photo: "https://i.ibb.co/2stKXZC/Las-alzan-sus-voces-21-de-diciembre-2019.jpg", title:"Jovenes con vision 2020", data: "http://drive.google.com/file/d/18CxrKsaSDUU-px7Cr7mwPPNFj3GDnfT_gHVEFU_fSqg/preview", author:"Cristina De la Hoz Marquez" },
-      ]
-    }),
-    methods:{
-
-    },
-    components:{
-      News
-    }  
-  } 
+  name: 'Noticias',
+  data: () => ({
+  }),
+  computed: {
+    ...mapGetters(['getArticles'])
+  },
+  methods: {
+  },
+  components: {
+    News
+  }
+}
 </script>

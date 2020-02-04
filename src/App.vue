@@ -1,7 +1,7 @@
 <template>
   <v-app >
     <NavBar :routes='links'></NavBar>
-    <router-view style='margin-top: calc(10vh + 3vw)'></router-view>
+    <router-view style='margin-top: calc(8vh + 3vw)'></router-view>
     <Footer></Footer>
   </v-app>
 </template>
@@ -10,6 +10,8 @@
 
 import NavBar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { mapGetters, mapMutations } from 'vuex'
+import request from '@/serverConfigurations.js'
 
 export default {
   name: 'App',
@@ -20,8 +22,24 @@ export default {
       { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda / Store' },
       { to: '/chakero', name: 'Chakero', title: 'Noticias', icon: 'mdi-newspaper' },
       { to: '/creditos', name: 'Creditos', title: '', icon: 'mdi-account-group' }
-    ]
+    ],
+    news: []
   }),
+  mounted () {
+    request.getArticles()
+      .then(async result => {
+        await this.setArticles(result)
+      })
+      .catch(err => {
+        alert(err.msg)
+      })
+  },
+  computed: {
+    ...mapGetters(['getArticles'])
+  },
+  methods: {
+    ...mapMutations(['setArticles'])
+  },
   components: {
     NavBar,
     Footer

@@ -5,7 +5,7 @@ Modificaciones:
   Componentes:
     Word:
       + Componente creado para poder mostrar las palabras encontradas.
-    CarrouserNews:
+    CarrouselNews:
       + Componente creado.
       + Este componente funciona para mostrar las noticias más nuevas.
       + Este componente se colocó en la ventana principal, porque al entrar los usuarios por ahí, estos pueden tener conocimiento inmediato de las noticias más relevantes y nuevas, sin necesidad de moverse a la pestaña de noticias. A pesas de mostrar las noticias aquí, estas tambien estarán en su pestaña correspondiente.

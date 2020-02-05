@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-// const serverName = 'http://167.71.249.170:5000/'
-const serverName = 'http://localhost:5000/'
+const serverName = 'http://167.71.249.170:5000/'
+// const serverName = 'http://localhost:5000/'
 
 class Server {
   static async getPalabrasPorLetra (letra) {

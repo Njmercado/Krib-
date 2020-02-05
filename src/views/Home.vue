@@ -109,7 +109,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.getArticles.forEach(el => this.news.push(el))
-    }, 400)
+    }, 1000)
   },
   computed: {
     ...mapGetters([

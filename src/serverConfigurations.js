@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-const serverName = 'http://167.71.249.170:5000/'
+const serverName = 'https://dicapi.kribi.com.co/'
 // const serverName = 'http://localhost:5000/'
 
 class Server {
@@ -62,21 +62,17 @@ class Server {
     return result.data.response
   }
 
-  static getArticles () {
-    return axios.get(
-      `${serverName}articles`,
-      {
+  static async getArticles () {
+    try {
+      const result = await axios.get(`${serverName}articles`, {
         headers: {
           'x-authorization-server': `Basic ${KEY}`
         }
-      }
-    )
-      .then(result => {
-        return result.data.data
       })
-      .catch(err => {
-        throw err.response
-      })
+      return result.data.data
+    } catch (err) {
+      throw err.response
+    }
   }
 }
 

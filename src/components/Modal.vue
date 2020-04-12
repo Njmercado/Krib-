@@ -5,18 +5,18 @@
     </template>
     <v-card>
      <div class="idioma">
-        {{idioma}}
+      <kbd style="background-color: #d99b29">{{idioma}}</kbd>
      </div>
       <v-card-title class='titulo'>
         <v-row justify='center'>
-          <div id='titulo' class='white--text'>
+          <div id='titulo' class='white--text' style="font-size: 1.2em">
             {{palabra}}
           </div>
         </v-row>
       </v-card-title>
       <v-card-text>
         <v-container>
-          <v-chip 
+          <v-chip
             class="ma-2"
             color="#d99b29"
             v-for="(def, index) in definicion" 
@@ -25,6 +25,7 @@
           >
             {{def}}
           </v-chip>
+          <v-divider v-if="definicion.lenght>0 && ejemplos.length>0"></v-divider>
           <v-row
             v-for='(ejemplo,index) in ejemplos'
             :key='index'

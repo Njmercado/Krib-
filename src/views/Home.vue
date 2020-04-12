@@ -31,14 +31,13 @@
       <v-container fluid grid-list-md grid-list-lg>
         <v-row justify='center'>
           <v-col align='center' cols='6' xs='6' sm='6' md='2' lg='2'>
-            <v-card
-              color='#562011'
-              style='font-weight: bold; font-size: calc(3vh + 3vw)'
-              width='2em'
-              dark
+            <v-avatar
+              size="100"
+              color="#562011"
+              style="font-weight: bold; font-size: calc(3vh + 3vw); color: white"
             >
               {{letra}}
-            </v-card>
+            </v-avatar>
           </v-col>
         </v-row>
         <v-row justify='center'>

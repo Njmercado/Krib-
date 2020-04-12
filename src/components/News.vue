@@ -1,7 +1,8 @@
 <template>
-  <v-dialog min-width="80vw" max-width="85vw">
-    <template v-slot:activator="{ on }">
-      <v-card v-on="on" style="border-radius: 16px">
+  <!-- <v-dialog min-width="80vw" max-width="85vw">
+    <template v-slot:activator="{ on }"> -->
+      <!-- <v-card v-on="on" style="border-radius: 16px" onclick="openNews"> -->
+      <v-card style="border-radius: 16px" @click="openNews(title)">
         <v-img
           :src="photo"
           class="white--text align-end"
@@ -15,11 +16,11 @@
           </v-card-text>
         </v-img>
       </v-card>
-    </template>
+    <!-- </template>
     <v-card height="88vh" style="border-radius: 16px">
       <iframe :src="data" class="frame"></iframe>
     </v-card>
-  </v-dialog>
+  </v-dialog> -->
 </template>
 
 <script>
@@ -31,7 +32,13 @@ export default {
     'title',
     'data',
     'author'
-  ]
+  ],
+  methods: {
+    openNews (news) {
+      news = news.toLowerCase().split(' ').join('-')
+      this.$router.push(`/chakero/${news}`)
+    }
+  }
 }
 </script>
 

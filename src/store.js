@@ -17,9 +17,9 @@ export default new Vuex.Store({
     articles: []
   },
   mutations: {// Sirve para actualizar/cambiar informacion de las variables declaradas arriba(state)
-    setLetraParaPalabras (state, letra) { // Para obtener todas las palabras relacionadas con la letra que se ha seleccionada
-      if (letra.toLowerCase() !== state.letra.toLowerCase()) { // Solo va a realizar busqueda cuando se digite una letra diferente
-        Server.getPalabrasPorLetra(letra).then(result => {
+    setLetraParaPalabras (state, data) { // Para obtener todas las palabras relacionadas con la letra que se ha seleccionada
+      if (data.letra.toLowerCase() !== state.letra.toLowerCase()) { // Solo va a realizar busqueda cuando se digite una letra diferente
+        Server.getPalabrasPorLetra(data.letra, data.page).then(result => {
           state.listaPalabras = result
         })
       }

@@ -21,7 +21,7 @@
           <v-btn
             class='btn letter'
             color='brown darken-2'
-            @click.stop='letra = i'
+            @click.stop='letra = i; someLetterButtonHasBeenPressed = true'
             fab dark small
           >
             {{i}}
@@ -32,7 +32,7 @@
         <v-row justify='center'>
           <v-col align='center' cols='6' xs='6' sm='6' md='2' lg='2'>
             <v-avatar
-              size="100"
+              size="116"
               color="#562011"
               style="font-weight: bold; font-size: calc(3vh + 3vw); color: white"
             >
@@ -46,7 +46,7 @@
               label='consultar'
               placeholder='consultar'
               color='#562011'
-              v-on:keyup='setAutoCompletado(valueTextField)'
+              v-on:keyup='setAutoCompletado(valueTextField); someLetterButtonHasBeenPressed = false'
               v-model='valueTextField'
               append-icon='mdi-send-circle'
               solo rounded dense
@@ -56,7 +56,7 @@
         </v-row>
       </v-container>
       <v-container>
-        <v-row justify="center" align="center">
+        <v-row justify="space-around" align="center">
           <v-col
             cols="12" xs="12" sm="12" md="auto" lg="auto" xl="auto"
             v-for="(palabra, index) in getPalabrasPorLetra"
@@ -65,6 +65,21 @@
           >
             <Word :word='palabra' size="16"></Word>
           </v-col>
+        </v-row>
+        <v-row
+          v-if="someLetterButtonHasBeenPressed"
+          justify="center"
+          style="margin-bottom: -100px; margin-top: 96px"
+        >
+            <v-btn color="#E09518" small style="margin-right: 8px" @click='changePageOnWordsList(-1)'>
+              <v-icon dark>arrow_left</v-icon>
+            </v-btn>
+            <v-chip>{{listWordsPage}}</v-chip>
+            <v-btn color="#E09518" small style="margin-left: 8px" @click='changePageOnWordsList(+1)'>
+              <v-icon dark>
+                arrow_right
+              </v-icon>
+            </v-btn>
         </v-row>
       </v-container>
     </v-row>
@@ -103,7 +118,9 @@ export default {
         link: '/',
         cover: true
       }
-    ]
+    ],
+    listWordsPage: 0,
+    someLetterButtonHasBeenPressed: false
   }),
   mounted () {
     setTimeout(() => {
@@ -123,7 +140,7 @@ export default {
   },
   watch: {
     letra (val) {
-      this.setLetraParaPalabras(val)
+      this.setLetraParaPalabras({ letra: val, page: 0 })
     }
   },
   methods: {
@@ -131,6 +148,10 @@ export default {
     async mostrarModal (value) {
       await this.setPalabra(value) // Envio la palabra que va a ser buscada
       this.openModal = await !this.openModal
+    },
+    changePageOnWordsList (val) {
+      this.listWordsPage = (this.listWordsPage + val) < 0 ? 0 : this.listWordsPage + val
+      this.setLetraParaPalabras({ letra: this.letra, page: this.listWordsPage })
     }
   },
   components: {

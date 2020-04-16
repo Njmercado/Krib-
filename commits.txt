@@ -1,21 +1,8 @@
 Modificaciones:
   General:
-    - Eliminado el downloadjs package
-    - Eliminado el vue-pdf package
-    - Eliminado el pugjs package
-    - Eliminado el pug-loader package
-    + Agregada transición entre ventanas
-    + Agregado package marked
+    ? Las rutas para poder acceder al servidor han sido cambiadas, ya que el servidor ha sufrido cambios.
   Views:
     Home:
-      - Eliminada imagen de la U.
-      + Card para poder visualizar la letra a visitar ahora es redonda.
-    ShowNews:
-      + Agregada vista.
-      + Esta vista funciona para poder visualizar las noticias.
-      + Esta view compila los archivos, markdowns, que se encuentran en /public/markdown/
-  Router:
-    * /chakero/:id:
-      + Agregada ruta.
-      + Esta ruta se usa para poder ampliar las noticias, poder visualizar la noticia completa.
+      + Agregado pagination.
+
 

@@ -1,14 +1,15 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-const serverName = 'https://dicapi.kribi.com.co/'
-// const serverName = 'http://localhost:5000/'
+// const serverName = 'https://dicapi.kribi.com.co/'
+const serverName = 'http://localhost:5000/'
 
 class Server {
-  static async getPalabrasPorLetra (letra) {
+  static async getPalabrasPorLetra (letra, page) {
+    console.log(page)
     const result = await axios
       .get(
-        `${serverName}buscar/lista_palabras?letra=${letra}`,
+        `${serverName}words/list/${letra}/${page}`,
         {
           headers: {
             'x-authorization-server': `Basic ${KEY}`
@@ -19,27 +20,29 @@ class Server {
   }
 
   static async buscarPalabra (palabra) {
-    const result = await axios
+    let data = await axios
       .get(
-        `${serverName}buscar/palabra?palabra=${palabra}`,
+        `${serverName}words/info/${palabra}`,
         {
           headers: {
             'x-authorization-server': `Basic ${KEY}`
           }
         }
       )
+
+    data = data.data[0]
     return {
-      definicion: result.data.definicion.split('/'),
-      ejemplos: result.data.ejemplos,
-      palabra: result.data.palabra,
-      idioma: result.data.idioma
+      definicion: data.definicion.split('/'),
+      ejemplos: data.ejemplos,
+      palabra: data.palabra,
+      idioma: data.idioma
     }
   }
 
   static async autoCompletado (value) {
     const result = await axios
       .get(
-        `${serverName}buscar/palabra/autocompletado?palabra=${value}`,
+        `${serverName}words/some/${value}`,
         {
           headers: {
             'x-authorization-server': `Basic ${KEY}`

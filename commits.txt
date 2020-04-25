@@ -1,3 +1,3 @@
 Modificaciones:
-  General:
-    ? Cambiado para poder conectarse con la nueva API.
+  Issues:
+    + Solucionado problema de no poder visualizar solo la palabra cuando esta sea buscada. Antes lo que sucedia es que se mostraba todo el contenido del request.

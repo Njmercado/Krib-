@@ -40,6 +40,9 @@
             </v-avatar>
           </v-col>
         </v-row>
+
+        <!-- Busqueda de las palabras mediante autocompletado -->
+
         <v-row justify='center'>
           <v-col cols='8' xs='4' md='4'>
             <v-text-field
@@ -61,9 +64,9 @@
             cols="12" xs="12" sm="12" md="auto" lg="auto" xl="auto"
             v-for="(palabra, index) in getPalabrasPorLetra"
             :key="index"
-            @click='mostrarModal(palabra)'
+            @click='mostrarModal(palabra.palabra)'
           >
-            <Word :word='palabra' size="16"></Word>
+            <Word :word='palabra.palabra' size="16"></Word>
           </v-col>
         </v-row>
         <v-row

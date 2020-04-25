@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-const serverName = 'https://dicapi.kribi.com.co/'
-// const serverName = 'http://localhost:5000/'
+// const serverName = 'https://dicapi.kribi.com.co/'
+const serverName = 'http://localhost:5000/'
 
 class Server {
   static async getPalabrasPorLetra (letra, page) {
@@ -54,13 +54,14 @@ class Server {
   static async palabrasRandom (cantidad) {
     const result = await axios
       .get(
-        `${serverName}buscar/random?cantidad=${cantidad}`,
+        `${serverName}words/random/${cantidad}/10`,
         {
           headers: {
             'x-authorization-server': `Basic ${KEY}`
           }
         }
       )
+    console.log(result.data.response)
     return result.data.response
   }
 

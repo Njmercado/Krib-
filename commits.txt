@@ -1,8 +1,3 @@
 Modificaciones:
   General:
-    ? Las rutas para poder acceder al servidor han sido cambiadas, ya que el servidor ha sufrido cambios.
-  Views:
-    Home:
-      + Agregado pagination.
-
-
+    ? Cambiado para poder conectarse con la nueva API.

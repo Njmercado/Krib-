@@ -71,11 +71,22 @@
           justify="center"
           style="margin-bottom: -100px; margin-top: 96px"
         >
-            <v-btn color="#E09518" small style="margin-right: 8px" @click='changePageOnWordsList(-1)'>
+            <v-btn
+              color="#E09518"
+              small
+              style="margin-right: 8px"
+              @click='changePageOnWordsList(-1)'
+            >
               <v-icon dark>arrow_left</v-icon>
             </v-btn>
             <v-chip>{{listWordsPage}}</v-chip>
-            <v-btn color="#E09518" small style="margin-left: 8px" @click='changePageOnWordsList(+1)'>
+            <v-btn
+              color="#E09518"
+              small
+              style="margin-left: 8px"
+              @click='changePageOnWordsList(+1)'
+              :disabled = "isThereMoreWords"
+            >
               <v-icon dark>
                 arrow_right
               </v-icon>
@@ -136,7 +147,10 @@ export default {
       'getEjemplos',
       'getIdioma',
       'getArticles'
-    ])
+    ]),
+    isThereMoreWords () {
+      return !this.getPalabrasPorLetra.length > 0
+    }
   },
   watch: {
     letra (val) {

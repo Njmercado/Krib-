@@ -1,12 +1,11 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-// const serverName = 'https://dicapi.kribi.com.co/'
-const serverName = 'http://localhost:5000/'
+const serverName = 'https://dicapi.kribi.com.co/'
+// const serverName = 'http://localhost:5000/'
 
 class Server {
   static async getPalabrasPorLetra (letra, page) {
-    console.log(page)
     const result = await axios
       .get(
         `${serverName}words/list/${letra}/${page}`,
@@ -42,7 +41,7 @@ class Server {
   static async autoCompletado (value) {
     const result = await axios
       .get(
-        `${serverName}words/some/${value}`,
+        `${serverName}words/byWord/${value}`,
         {
           headers: {
             'x-authorization-server': `Basic ${KEY}`

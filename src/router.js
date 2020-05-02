@@ -7,7 +7,7 @@ import Store from './store'
 
 (() => {
   Server.getArticles().then(response => {
-    Store.commit("setArticles", response)
+    Store.commit('setArticles', response)
   })
   // await configRoutes()
 })()

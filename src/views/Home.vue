@@ -1,5 +1,29 @@
 <template>
   <v-container fluid style="background-color: #6E2E1E">
+
+    <!-- Patreon Botton -->
+    <v-tooltip top>
+      <template v-slot:activator='{ on }'>
+        <v-btn
+          v-on='on'
+          data-aos="zoom-in"
+          color="yellow darken-2"
+          class="btn mr-4 mb-4"
+          dark fixed fab bottom right>
+          <v-icon large>mdi-currency-usd</v-icon>
+        </v-btn>
+      </template>
+      <v-card width="16em" min-height="16em">
+        <v-card-title>
+          <span class="mx-auto" style="color: #6E2E1E">Donaciones</span>
+        </v-card-title>
+        <v-card-text>
+          Si quieres ver crecer aun más esta plataforma, tenemos la hermosa opción
+          de poder recibir donaciones de tu parte y así poder regalarte la mejor experiencia posible.
+        </v-card-text>
+      </v-card>
+    </v-tooltip>
+
     <v-row>
       <CarrouselNews :news="news"></CarrouselNews>
     </v-row>

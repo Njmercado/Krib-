@@ -1,7 +1,8 @@
 Modificaciones:
-  Components:
-    * DictionaryInfoModal:
-      + Componente creaodo.
-      + Este componente se usa para poder mostrar al usuario como funciona adecuadamente el diccionario.
-      + Agregada la opcion de cerrar el diccionario cuando se presiona sobre el boton de cerrar.
-
+  Componentes:
+    * New:
+      + Agregado componente on-hover.
+      + On-hover permite el poder interactuar con el elemento cuando se haga on-hover sobre el.
+  Views:
+    * Home:
+      Agregada boton de donaciones.    

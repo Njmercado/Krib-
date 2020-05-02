@@ -112,7 +112,8 @@ export default {
       'R',
       'S',
       'T',
-      'U'
+      'U',
+      'Y'
     ],
     openModal: false,
     letra: '',

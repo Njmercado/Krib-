@@ -1,49 +1,7 @@
 Modificaciones:
-  General:
-    + Instalado vue-scrollto. Este package permite le poder hacer scroll.
-    + Instalado vue-aos. Este package permite realizar animaciones en scroll.
   Components:
-    * Word:
-      + Parametro de color agregado.
-      + Parametro de color de texto agregado.
-      + Parametro de elevación agregado.
-    * Navbar:
-      ? Cambiados los colores.
-      ? Cambiado el logo de la página.
-      + Agregados iconos de redes sociales.
-      + Agregado link al diccionario
-    * Carrousel:
-      - Eliminados los botones de desplazamiento.
-      + Las imagenes ahora se acomodan al espacio disponible.
-    * Game:
-      ? Cambiado color de fondo.
-      - Eliminado el boton que se tenia antes, ahora es un solo boton modificado con ifs y hacer el código más corto y legible.
-    * News:
-      ? Cambiado el color de fondo
-    * Creador:
-      - Este componente ya no será usado, por ahora.
-      - Este componente fue cambiado por el timeline ubicado en la pestaña de creditos.
-    * Modal:
-      ? Cambiado los colores del modal, tanto el fondo como el fondo de la palabra encontrada, y tambien el fondo de los ejemplos.
-  Views:
-    * Diccionario:
-      + Vista creada.
-      + Vista usada para separar el diccionario de la pantalla principal y poder así despejar el contenido.
-      - El card usado para poder ver la letra seleccionada ha sido eliminado.
-    * Home:
-      ? Toda la vista principal ha sido cambiada en base a las propuestas de diseño dadas por el diseñador.
-    * Juegos:
-      ? Cambiado color de fonto.
-      ? Los elementos ahora estan más centrados.
-    * Chakero:
-      + Centrados verticales los componenentes.
-      + Agregados efectos visuales.
-      + Aplicado space-around a los elementos.
-    * TemplateOnDevelopPage:
-      ? Cambiado el color de fondo.
-      + Agregadas algunas animaciones.
-      + Centrado el contenido.
-    * Creditos:
-      + Ahora toda la vista es un timeline. Permite poder visualizar mejor la información.
-    * Actividades:
-      + Vista agregada para poder visualizar las actividades futuras que se planeen.
+    * DictionaryInfoModal:
+      + Componente creaodo.
+      + Este componente se usa para poder mostrar al usuario como funciona adecuadamente el diccionario.
+      + Agregada la opcion de cerrar el diccionario cuando se presiona sobre el boton de cerrar.
+

@@ -38,7 +38,7 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn small dark class="btn text-lowercase" color="red darken-3">cerrar</v-btn>
+        <v-btn small dark class="btn text-lowercase" color="red darken-3" @click="realModelOpener = false">cerrar</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid grid-list-md grid-list-lg>
-    <v-row wrap justify='center'>
+  <v-container fluid grid-list-md grid-list-lg style="background-color: var(--yellow-background)">
+    <v-row wrap justify='space-around' align="center" style="min-height:100vh">
       <v-col
-        cols='12'
+        cols='10'
         md='4'
         sm='6'
-        xs='12'
+        xs='10'
         lg='3'
         d-flex
         v-for='(game, index) in games'

@@ -1,26 +1,15 @@
 <template>
-  <!-- <v-dialog min-width="80vw" max-width="85vw">
-    <template v-slot:activator="{ on }"> -->
-      <!-- <v-card v-on="on" style="border-radius: 16px" onclick="openNews"> -->
-      <v-card style="border-radius: 16px" @click="openNews(title)">
-        <v-img
-          :src="photo"
-          class="white--text align-end"
-          gradient="to bottom, rgba(0,0,0,.0), rgba(0,0,0,.8)"
-        >
-          <v-card-title>
-            {{title}}
-          </v-card-title>
-          <v-card-text style="text-align: start; color: lightgrey;">
-            {{author}}
-          </v-card-text>
-        </v-img>
-      </v-card>
-    <!-- </template>
-    <v-card height="88vh" style="border-radius: 16px">
-      <iframe :src="data" class="frame"></iframe>
-    </v-card>
-  </v-dialog> -->
+  <v-card style="border-radius: 12px" @click="openNews(title)">
+    <v-img
+      style="min-height: 20em"
+      :src="photo"
+      class="white--text align-end"
+      gradient="to bottom, rgba(0,0,0,.0), rgba(0,0,0,.5)"
+    >
+      <v-card-title> {{title}} </v-card-title>
+      <v-card-text style="text-align: start; color: lightgrey; font-weight: bold"> {{author}} </v-card-text>
+    </v-img>
+  </v-card>
 </template>
 
 <script>

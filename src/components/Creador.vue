@@ -13,7 +13,7 @@
       <v-row>
         <span style="font-size: .9em; font-weight: 600" class="text--left">{{role}}</span>
       </v-row>
-      <v-row class="text--around">
+      <v-row>
         <span v-if="showInfo" style="font-size: .9em;">{{description}}</span>
       </v-row>
     </v-card-text>

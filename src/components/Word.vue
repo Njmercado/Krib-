@@ -1,10 +1,10 @@
 <template>
     <v-card
-      style="cursor: pointer; color: #562011; margin: .8em; border-radius: 16px"
-      color="#E09518"
+      :color="color"
+      :elevation="elevation ? 1 : 0"
     >
-      <v-card-title>
-        <label class="center-x" :style="fontSize">{{word}}</label>
+      <v-card-title :style="textStyle">
+        <label class="center-x" :style="styles">{{word}}</label>
       </v-card-title>
     </v-card>
 </template>
@@ -14,15 +14,21 @@
 export default {
 
   name: 'Word',
-  props: [
-    'word',
-    'size'
-  ],
   data: () => ({
-    fontSize: ''
+    styles: ''
   }),
+  props: {
+    word: { type: String },
+    size: { type: String },
+    color: { type: String },
+    textColor: { type: String, default: 'white' },
+    elevation: { type: Boolean, default: true }
+  },
+  computed: {
+    textStyle () { return ` color: ${this.textColor}` }
+  },
   created: function () {
-    this.fontSize = `font-size: ${this.size}px; font-weight: bold; cursor: pointer`
+    this.styles = `font-size: ${this.size}; font-weight: bold; cursor: pointer;`
   }
 }
 </script>

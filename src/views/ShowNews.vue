@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid style="background-color: var(--yellow-background)">
     <v-row justify="center">
       <v-col cols="12" md="7" lg="7" xs="11" sm="11">
         <v-card style="border-radius: 1em">
@@ -17,7 +17,7 @@
     <!-- Author -->
     <v-row justify="center">
       <v-col cols="12" md="7" lg="7" xl="7" xs="11" sm="11">
-        <v-card style="border-radius: 1em">
+        <v-card color="var(--yellow-background)" style="border-radius: 1em">
           <div style="text-align: start; padding: 1em">
             <v-avatar
               size="96"

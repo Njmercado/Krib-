@@ -20,14 +20,14 @@ let routes = [
     name: 'Home',
     component: Home
   },
-  // {
-  // path: '/diccionario',
-  // name: 'Diccionario',
-  // route level code-splitting
-  // this generates a separate chunk (about.[hash].js) for this route
-  // which is lazy-loaded when the route is visited.
-  // component: () => import(/* webpackChunkName: "about" */ './views/Diccionario.vue')
-  // },
+  {
+    path: '/diccionario',
+    name: 'Diccionario',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ './views/Diccionario.vue')
+  },
   {
     path: '/juegos',
     name: 'Juegos',
@@ -51,38 +51,18 @@ let routes = [
     component: () => import('./views/templateOnDevelopPage.vue')
   },
   {
+    path: '/actividades',
+    name: 'Actividades',
+    // component: () => import('./views/Tienda.vue')
+    component: () => import('./views/templateOnDevelopPage.vue')
+  },
+  {
     path: '/chakero/:id',
     name: 'articulo',
     props: true,
     component: ShowNews
   }
-  /* {
-    path: '*' ,
-    redirect: ' / '
-  }, // catch all use case
-  */
 ]
-
-// const configRoutes = () => {
-//   Store.getters.getArticles.forEach((article, index) => {
-//     routes.push({
-//       path: `/${index}`,
-//       name: `${article.title}`,
-//       component: () => {
-//         console.log("cargado config")
-//         import('../public/markdown/test.js')
-//       }
-//     })
-//   })
-// }
-
-// setTimeout(() => {
-//   routes.push({
-//     path: `/chakero/${Store.getters.getArticles[1].title.toLowerCase().split(' ').join('-')}`,
-//     name: 'name hp',
-//     component: () => import('../public/markdown/test.md')
-//   })
-// }, 1000)
 
 export default new Router({
   mode: 'history',

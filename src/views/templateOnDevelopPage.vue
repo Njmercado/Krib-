@@ -1,40 +1,22 @@
 <template>
-  <v-container
-  >
-    <v-row
-      align="center"
-      justify="center"
-      style="margin-top: 10vh"
-    >
-      <v-img src="https://i.ibb.co/Bg3xkB0/icono.png" max-width="15%" max-height="15%">
-      </v-img>
-    </v-row>
-    <v-row>
+  <v-container fluid style="background-color: var(--yellow-background);">
+    <v-row wrap justify="center" align="center" style="min-height:100vh">
       <v-col>
-        </br></br><span>OOOOooooopps!!</span></br></br>
-        <span>Parece que nos has descubierto 🤕 😬</span></br></br>
-        <span>Nos encontramos desarrollando esta parte de la pagina, para brindarte la mejor experiencia posible que podamos dar.</span></br>
-        <span>Muy pronto estaremos lanzando a la luz esta maravillosa etapa y así captar toda su atención 👊 💪</span>
+        <v-img class="mx-auto" data-aos="zoom-in" src="https://i.ibb.co/Bg3xkB0/icono.png" max-width="25%" max-height="25%"></v-img>
       </v-col>
+      <br/><br/>OOOOooooopps!!<br/><br/>
+      Parece que nos has descubierto 🤕 😬<br/><br/>
+      Nos encontramos desarrollando esta parte de la pagina, para brindarte la mejor experiencia posible que podamos dar.<br/>
+      Muy pronto estaremos lanzando a la luz esta maravillosa etapa y así captar toda su atención 👊 💪
     </v-row>
-  </v-container>    
+  </v-container>
 </template>
 
 <script>
-  
-  export default {
+export default {
 
-    name: "",
-    methods:{
-
-    },
-    components:{
-
-    }  
-  } 
+  name: 'TemplateOnDevelopPage',
+  methods: {},
+  components: {}
+}
 </script>
-
-<style scoped>
-
-</style>
-

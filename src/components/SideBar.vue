@@ -3,16 +3,12 @@
       <v-list nav dense rounded>
         <v-list-item-group
           v-model="items"
-          active-class="brown--text text--accent-4"
+          color="#53220C"
           class="adjust-font"
         >
-          <v-img
-            src="https://i.ibb.co/Bg3xkB0/icono.png"
-            max-width="64"
-            max-height="64"
-            style="margin: 30px auto 30px auto;"
-          >
-          </v-img>
+          <div style="margin: 25px; background-color: #53220C; padding: 16px; border-radius: 8px">
+            <v-img src="https://i.ibb.co/3FNTmL4/LOGO-KRIB-Mesa-de-trabajo-1.png"></v-img>
+          </div>
 
           <v-list-item
             v-for="route in routes"
@@ -25,7 +21,7 @@
               </v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title class="text-capitalize">
+              <v-list-item-title class="text-capitalize" style="font-weight: bold">
                 {{route.name}}
               </v-list-item-title>
             </v-list-item-content>
@@ -49,7 +45,7 @@ export default {
   }),
   watch: {
     open (val) {
-      this.openClose = val ? val : true
+      this.openClose = val || true
     }
   }
 }

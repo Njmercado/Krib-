@@ -1,11 +1,8 @@
 <template>
-  <v-dialog max-width='60em'>
-    <template v-slot:activator='{ on }'>
-      <v-icon v-on='on' ref='activate'></v-icon>
-    </template>
-    <v-card>
+  <v-dialog max-width='50em' v-model="realModalOpener">
+    <v-card color="var(--yellow-background)">
      <div class="idioma">
-      <kbd style="background-color: #d99b29">{{idioma}}</kbd>
+      <kbd style="background-color: #DEA44A">{{idioma}}</kbd>
      </div>
       <v-card-title class='titulo'>
         <v-row justify='center'>
@@ -18,8 +15,8 @@
         <v-container>
           <v-chip
             class="ma-2"
-            color="#d99b29"
-            v-for="(def, index) in definicion" 
+            color="#DEA44A"
+            v-for="(def, index) in definicion"
             :key="index"
             dark
           >
@@ -51,9 +48,12 @@ export default {
     'palabra',
     'idioma'
   ],
+  data: () => ({
+    realModalOpener: false
+  }),
   watch: {
     open (val) {
-      this.$refs.activate.$el.click() // Activo el elemento que abrirá el modal
+      this.realModalOpener = this.realModalOpener ? this.realModalOpener : true
     }
   }
 }
@@ -63,17 +63,17 @@ export default {
 <style>
 
 .titulo{
-  background:#8c3420;
+  background: #53220C;
   height: 8vh;
   font-size: 2vw;
 }
 
 .idioma {
-  background:#8c3420;
+  background: #53220C;
   color: white;
   text-align: left;
   padding: .5em .5em .5em .5em;
-  border-style: hidden; 
+  border-style: hidden;
 }
 
 .definicion{
@@ -83,7 +83,7 @@ export default {
 }
 
 .ejemplo{
-  background: darkgrey;
+  background: #BDBDBD;
   margin-top: 2vw;
   height: 5vh;
   border-radius: 1vw;

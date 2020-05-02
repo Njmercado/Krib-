@@ -5,7 +5,7 @@
       name="component-fade"
       mode="out-in"
     >
-      <router-view style='margin: calc(8vh + 3vw) auto; height: 100%; '></router-view>
+      <router-view style='min-height: 100vh;'></router-view>
     </transition>
     <Footer></Footer>
   </v-app>
@@ -22,9 +22,11 @@ export default {
   data: () => ({
     links: [
       { name: 'Inicio', to: '/', icon: 'mdi-home', title: '' },
+      { name: 'Diccionario', to: '/diccionario', icon: 'mdi-book', title: 'Diccionario' },
       { name: 'Juegos', to: '/juegos', icon: 'mdi-teach', title: '' },
-      { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda / Store' },
       { to: '/chakero', name: 'Chakero', title: 'Noticias', icon: 'mdi-newspaper' },
+      { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda / Store' },
+      { to: '/actividades', name: 'Actividades', title: 'Actividades', icon: 'mdi-calendar' },
       { to: '/creditos', name: 'Creditos', title: '', icon: 'mdi-account-group' }
     ],
     news: []
@@ -52,6 +54,10 @@ export default {
 </script>
 
 <style>
+
+:root {
+  --yellow-background: #FFF6DE
+}
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

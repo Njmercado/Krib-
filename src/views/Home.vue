@@ -1,140 +1,65 @@
 <template>
-  <v-container fluid>
-    <v-row style="margin-top: -8vh">
+  <v-container fluid style="background-color: #6E2E1E">
+    <v-row>
       <CarrouselNews :news="news"></CarrouselNews>
     </v-row>
     <v-row>
-      <v-row justify="center" class='description'>
-        <v-col cols="11">
-          <label class='tituloDescripcion'>DICCIONARIO PALENQUERO</label> <br>
-          <label class='contenidoDescripcion'>
-            El diccionario virtual de la Lengua Palenquera, <kbd style="background-color: #c1000c">Kribí</kbd>,
-            es una herramienta Web la cual permite a sus usuarios la búsqueda y práctica para el aprendizaje
-            de forma rapida y precisa del léxico Palenquero.
-          </label>
-        </v-col>
-      </v-row>
-
-      <!-- Letras del diccionario -->
-      <v-row style='background-color: var(--kribi-brown); padding: 0 .8em 0 .8em' justify="center">
-        <v-col v-for='(i, index) in letras' :key='index'>
-          <v-btn
-            class='btn letter'
-            color='brown darken-2'
-            @click.stop='letra = i; someLetterButtonHasBeenPressed = true'
-            fab dark small
-          >
-            {{i}}
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-container fluid grid-list-md grid-list-lg>
-        <v-row justify='center'>
-          <v-col align='center' cols='6' xs='6' sm='6' md='2' lg='2'>
-            <v-avatar
-              size="116"
-              color="#562011"
-              style="font-weight: bold; font-size: calc(3vh + 3vw); color: white"
-            >
-              {{letra}}
-            </v-avatar>
-          </v-col>
-        </v-row>
-
-        <!-- Busqueda de las palabras mediante autocompletado -->
-
-        <v-row justify='center'>
-          <v-col cols='8' xs='4' md='4'>
-            <v-text-field
-              label='consultar'
-              placeholder='consultar'
-              color='#562011'
-              v-on:keyup='setAutoCompletado(valueTextField); someLetterButtonHasBeenPressed = false'
-              v-model='valueTextField'
-              append-icon='mdi-send-circle'
-              solo rounded dense
-            >
-            </v-text-field>
-          </v-col>
-        </v-row>
-      </v-container>
-      <v-container>
-        <v-row justify="space-around" align="center">
-          <v-col
-            cols="12" xs="12" sm="12" md="auto" lg="auto" xl="auto"
-            v-for="(palabra, index) in getPalabrasPorLetra"
-            :key="index"
-            @click='mostrarModal(palabra.palabra)'
-          >
-            <Word :word='palabra.palabra' size="16"></Word>
-          </v-col>
-        </v-row>
-        <v-row
-          v-if="someLetterButtonHasBeenPressed"
-          justify="center"
-          style="margin-bottom: -100px; margin-top: 96px"
-        >
-            <v-btn
-              color="#E09518"
-              small
-              style="margin-right: 8px"
-              @click='changePageOnWordsList(-1)'
-            >
-              <v-icon dark>arrow_left</v-icon>
-            </v-btn>
-            <v-chip>{{listWordsPage}}</v-chip>
-            <v-btn
-              color="#E09518"
-              small
-              style="margin-left: 8px"
-              @click='changePageOnWordsList(+1)'
-              :disabled = "isThereMoreWords"
-            >
-              <v-icon dark>
-                arrow_right
-              </v-icon>
-            </v-btn>
-        </v-row>
-      </v-container>
+      <KribiDescription></KribiDescription>
     </v-row>
-    <Modal
-      :open='openModal'
-      :palabra='getPalabra'
-      :ejemplos='getEjemplos'
-      :definicion='getDefinicion'
-      :idioma='getIdioma'
-    >
-    </Modal>
+
+    <v-row id="wordsSearcher" justify="center" style="height: 100%">
+      <v-col cols="8">
+        <v-img :src="require('@/assets/fondo-menu.png')">
+          <v-row justify="center" style="height: 10%; margin-top: 20%">
+            <label data-aos="fade-down" style="color: #fff6de; font-weight: bold; font-size: 4vh">¡CONOCE, APRENDE Y DIVIERTETE!</label>
+          </v-row>
+          <v-row justify="space-around" class="mt-10" style="height: 75%">
+            <v-col cols="7" xs="4" sm="4" md="6" lg="3" v-for="(option, index) in menuOptions" :key="index">
+              <v-card
+                :color="option.color"
+                elevation="4"
+                style="border-radius: 16px; text-decoration-line: none"
+                :to="option.to"
+                data-aos="fade-left"
+              >
+                <v-card-title>
+                  <v-img class="mx-auto" contain aspect-ratio="1.3" :src="option.icono"></v-img>
+                </v-card-title>
+                <label class="mx-auto text-uppercase" style="font-weight: bold; color: white">{{option.title}}</label>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-import { mapMutations, mapGetters } from 'vuex'
-import Modal from '@/components/Modal'
-import Word from '@/components/Word'
+import { mapGetters } from 'vuex'
 import CarrouselNews from '@/components/CarrouselNews'
+import KribiDescription from '@/components/KribiDescription'
 
 export default {
   name: 'Home',
   data: () => ({
-    letras: ['A', 'B', 'CH', 'D', 'E', 'F', 'G', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ',
-      'O', 'P', 'R', 'S', 'T', 'U'],
-    openModal: false,
-    letra: 'A',
-    valueTextField: '',
     news: [
       {
-        photo: 'https://res.cloudinary.com/kribi/image/upload/v1580701399/dictionary/introductory_dictionary_img.jpg',
+        // photo: 'https://res.cloudinary.com/kribi/image/upload/v1580701399/dictionary/introductory_dictionary_img.jpg',
+        photo: require('@/assets/portada.png'),
         title: 'Palenque',
         description: 'Niños en palenque',
         link: '/',
         cover: true
       }
     ],
-    listWordsPage: 0,
-    someLetterButtonHasBeenPressed: false
+    menuOptions: [
+      { title: 'Diccionario', color: '#D58F18', to: '/diccionario', icono: require('@/assets/icono-diccionario.png') },
+      { title: 'Noticias', color: '#AC3122', to: '/chakero', icono: require('@/assets/icono-noticias.png') },
+      { title: 'Actividades', color: '#9D522B', to: '/actividades', icono: require('@/assets/icono-actividades.png') },
+      { title: 'Tienda', color: '#C87624', to: '/bentorriyo', icono: require('@/assets/icono-tienda.png') }
+    ]
   }),
   mounted () {
     setTimeout(() => {
@@ -143,73 +68,12 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'getPalabrasPorLetra',
-      'getAutoCompletado',
-      'getPalabra',
-      'getDefinicion',
-      'getEjemplos',
-      'getIdioma',
       'getArticles'
-    ]),
-    isThereMoreWords () {
-      return !this.getPalabrasPorLetra.length > 0
-    }
-  },
-  watch: {
-    letra (val) {
-      this.setLetraParaPalabras({ letra: val, page: 0 })
-    }
-  },
-  methods: {
-    ...mapMutations(['setLetraParaPalabras', 'setPalabra', 'setAutoCompletado', 'setArticles']),
-    async mostrarModal (value) {
-      await this.setPalabra(value) // Envio la palabra que va a ser buscada
-      this.openModal = await !this.openModal
-    },
-    changePageOnWordsList (val) {
-      this.listWordsPage = (this.listWordsPage + val) < 0 ? 0 : this.listWordsPage + val
-      this.setLetraParaPalabras({ letra: this.letra, page: this.listWordsPage })
-    }
+    ])
   },
   components: {
-    Modal,
-    Word,
-    CarrouselNews
+    CarrouselNews,
+    KribiDescription
   }
 }
 </script>
-
-<style scope>
-
-:root{
-  --krbi-red:  #8c3420;
-  --kribi-yellow: #E09518;
-  --kribi-brown: #562011;
-}
-
-.description{
-  background: var(--kribi-yellow);
-  color: var(--kribi-brown);
-}
-
-.letter {
-  font-size: 1em;
-  cursor: pointer;
-  color: var(--kribi-yellow);
-}
-
-.tituloDescripcion{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: calc(1.5vh + 1.5vw);
-  font-family:  'Comic Sans MS', cursive, sans-serif;
-  font-weight: bolder
-}
-
-.contenidoDescripcion{
-  font-size: 1.2em;
-  font-weight: 500;
-  margin-bottom: 1em;
-}
-
-</style>

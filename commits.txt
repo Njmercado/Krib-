@@ -1,4 +1,4 @@
 Modificaciones:
   Views:
-    * Suto:
-      + Agregado contenido faltante en la parte de ventajas.
+    * Diccionario:
+      + Solucionado problema de poder obtener todas las palabras de una letra despues de buscar alguna palabra.

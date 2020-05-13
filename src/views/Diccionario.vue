@@ -25,7 +25,7 @@
         :text-color=" letra === i ? '#DEA44A' : '#6E2E1E'"
         size="4vh"
         :elevation='letra === i'
-        @click.native='letra = i; someLetterButtonHasBeenPressed = true'
+        @click.native='buscarPalabrasPorLetra(i); letra = i; someLetterButtonHasBeenPressed = true'
       ></Word>
     </v-row>
 
@@ -105,8 +105,8 @@ export default {
       'Y'
     ],
     openModal: false,
-    letra: '',
     valueTextField: '',
+    letra: '',
     listWordsPage: 0,
     someLetterButtonHasBeenPressed: false,
     dictionaryInfoModalOpener: false
@@ -122,11 +122,6 @@ export default {
     ]),
     isThereMoreWords () {
       return !this.getPalabrasPorLetra.length > 0
-    }
-  },
-  watch: {
-    letra (val) {
-      this.setLetraParaPalabras({ letra: val, page: 0 })
     }
   },
   methods: {
@@ -150,6 +145,9 @@ export default {
     },
     openDictionaryInfoModal () {
       this.dictionaryInfoModalOpener = !this.dictionaryInfoModalOpener
+    },
+    buscarPalabrasPorLetra (letra) {
+      this.setLetraParaPalabras({ letra: letra, page: 0 })
     }
   },
   components: {

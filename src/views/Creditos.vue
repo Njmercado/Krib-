@@ -109,7 +109,11 @@
     <v-row justify="center">
       <v-col cols="10" md="8" lg="8">
         Kribí como herramienta digital es una solución interactiva y divertida; permite llegar a
-        diferentes lugares que cuenten con acceso a internet, evitando que los usuarios.
+        diferentes lugares que cuenten con acceso a internet, evitando que los usuarios 
+        tengan que trasladarse. También reduce valores negativos ambientales que se dan
+        para acceder a escenarios de aprendizajes tradicionales. La plataforma, por ende, 
+        funciona como complemento y responde positivamente a la integración de las tecnologías 
+        de información y la comunicación en las dinámicas sociales y de formación.
       </v-col>
     </v-row>
   </v-container>

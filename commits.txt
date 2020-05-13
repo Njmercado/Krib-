@@ -1,18 +1,4 @@
 Modificaciones:
-  General:
-    - La ruta de Tienda se ha quitado, por ahora.
-  Componentes:
-    * KribiDescription:
-      - Componente eliminado.
-      - Este componente ya no será necesario para poder mostrar información relevante dentro de la pestaña principal.
-    * NavBar:
-      + Cuando se pone el cursor sobre algun vinculo, este mostrará el titulo en español.
-    * Word:
-      - Eliminados los bordes redondeados.
   Views:
-    * Home:
-      - Las imagenes de fondo amarillo y marron han sido eliminadas.
-      - Estas imagenes han sido reemplazadas por formas poligonales hechas con clip-path.
     * Suto:
-      ? Cambiado todo el estilo de la página.
-      + Agregadas Misión, Visión, Valores, Filosofia, y Ventajas.
+      + Agregado contenido faltante en la parte de ventajas.

@@ -33,8 +33,10 @@
               style="text-decoration-line: none; font-weight: bold; color: #53220C"
               :to="route.to"
               :title="route.title"
+              @mouseover="indexOfMouseOverLink = index"
+              @mouseleave="indexOfMouseOverLink = -1"
             >
-              {{route.name}}
+              {{indexOfMouseOverLink == index ? route.title : route.name}}
             </v-tab>
           </v-row>
         </v-tabs>
@@ -55,7 +57,8 @@ export default {
     'routes'
   ],
   data: () => ({
-    openCloseSideBar: false
+    openCloseSideBar: false,
+    indexOfMouseOverLink: 0
   }),
   mounted () {
     // Identifica si la página se ha abierto en un pc o un
@@ -69,7 +72,7 @@ export default {
 
     // Es usada ya que cuando se elimina lo de arriba, el espacio de las rutas,
     // Queda un espacio en blanco, por lo que hay que redefinir el margen de las cosas,
-    navbarContent.style.marginBottom = isMobile ? '4.6em' : '6.4em'
+    navbarContent.style.marginBottom = isMobile ? '4.6em' : '6em'
   },
   computed: {
     scrollTags: function () {

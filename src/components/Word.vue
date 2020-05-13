@@ -2,6 +2,7 @@
     <v-card
       :color="color"
       :elevation="elevation ? 1 : 0"
+      style="border-radius:  0px"
     >
       <v-card-title :style="textStyle">
         <label class="center-x" :style="styles">{{word}}</label>

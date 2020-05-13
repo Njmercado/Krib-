@@ -2,9 +2,9 @@
   <div style="min-height: 100%; background-color: var(--yellow-background)">
 
     <!-- Searcher -->
-    <v-container fluid style="background-color: #6E2E1E; min-height: 20em; padding-top: 9%; padding-bottom: 9%">
-      <v-img data-aos="zoom-in" :src="require('@/assets/icono-diccionario.png')" contain aspect-ratio="10"></v-img>
-      <v-col cols='8' xs='7' sm="7" md='4' class="mx-auto">
+    <v-container fluid style="background-color: #6E2E1E; min-height: 20em; padding-top: calc(3vh + 3vw);">
+      <img data-aos="zoom-in" :src="require('@/assets/icono-diccionario.png')" style="max-width: calc(9vh + 9vw)"/>
+      <v-col cols='11' xs='7' sm="7" md='4' lg="6" class="mx-auto my-auto">
         <v-text-field
           placeholder='Buscar'
           color='#562011'
@@ -13,43 +13,32 @@
           solo
         ></v-text-field>
       </v-col>
-      <v-btn class="btn" small color="#dea44a" style="color: 53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
+      <v-btn class="btn text-capitalize" small color="#dea44a" style="color: 53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
     </v-container>
 
     <!-- Letras del diccionario -->
     <v-row style="background-color: #DEA44A; padding-left: 2em; padding-right: 2em" justify="center">
       <Word
-        style="margin-left: calc(.1vw - .1vh); margin-right: calc(.1vw - .1vh)"
         v-for='(i, index) in letras' :key='index'
         :word="i"
         :color=" letra === i ? '#6E2E1E' : '#DEA44A'"
         :text-color=" letra === i ? '#DEA44A' : '#6E2E1E'"
         size="4vh"
-        :elevation="false"
+        :elevation='letra === i'
         @click.native='letra = i; someLetterButtonHasBeenPressed = true'
-        data-aos="zoom-in"
       ></Word>
     </v-row>
-    <!-- <v-row style="margin-top: 2em; margin-bottom: 2em" justify='center'>
-      <Word
-        data-aos="zoom-in"
-        color='#DEA44A'
-        text-color='#6E2E1E'
-        :word="letra"
-        :size="64"
-        style="width: 6em;"
-      ></Word>
-    </v-row> -->
 
+    <!-- Resultadao de las busquedas -->
     <v-container style="min-height: 55vh">
-      <v-row justify='space-around' align="center" style="min-height: 50vh">
+      <v-row align="center" style="min-height: 50vh">
         <v-col
-          cols='12'
-          xs='12'
-          sm='12'
-          md='auto'
-          lg='auto'
-          xl='auto'
+          cols='6'
+          xs='6'
+          sm='6'
+          md='3'
+          lg='3'
+          xl='3'
           v-for='(palabra, index) in getPalabrasPorLetra'
           :key='index'
           @click='mostrarModal(palabra.palabra)'

@@ -21,16 +21,16 @@ let routes = [
     component: Home
   },
   {
-    path: '/diccionario',
-    name: 'Diccionario',
+    path: '/kajangarí',
+    name: 'Kajangarí',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ './views/Diccionario.vue')
   },
   {
-    path: '/juegos',
-    name: 'Juegos',
+    path: '/arrelike',
+    name: 'Arrelike',
     component: () => import('./views/Juegos.vue')
   },
   {
@@ -40,8 +40,8 @@ let routes = [
     component: () => import('./views/Noticias.vue')
   },
   {
-    path: '/creditos',
-    name: 'Creditos',
+    path: '/suto',
+    name: 'Suto',
     component: () => import('./views/Creditos.vue')
   },
   {
@@ -50,17 +50,22 @@ let routes = [
     // component: () => import('./views/Tienda.vue')
     component: () => import('./views/templateOnDevelopPage.vue')
   },
-  {
-    path: '/actividades',
-    name: 'Actividades',
-    // component: () => import('./views/Tienda.vue')
-    component: () => import('./views/templateOnDevelopPage.vue')
-  },
+  // {
+  //   path: '/actividades',
+  //   name: 'Actividades',
+  //   // component: () => import('./views/Tienda.vue')
+  //   component: () => import('./views/templateOnDevelopPage.vue')
+  // },
   {
     path: '/chakero/:id',
     name: 'articulo',
     props: true,
     component: ShowNews
+  },
+  {
+    path: '/contactos',
+    name: 'Contactos',
+    component: () => import('./views/Contactos.vue')
   }
 ]
 

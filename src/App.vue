@@ -21,13 +21,12 @@ export default {
   name: 'App',
   data: () => ({
     links: [
-      { name: 'Inicio', to: '/', icon: 'mdi-home', title: '' },
-      { name: 'Diccionario', to: '/diccionario', icon: 'mdi-book', title: 'Diccionario' },
-      { name: 'Juegos', to: '/juegos', icon: 'mdi-teach', title: '' },
+      { name: 'Komensá', to: '/', icon: 'mdi-home', title: 'Inicio' },
+      { name: 'Kajangarí', to: '/kajangarí', icon: 'mdi-book', title: 'Diccionario' },
+      { name: 'Arrelike', to: '/arrelike', icon: 'mdi-teach', title: 'Actividades' },
       { to: '/chakero', name: 'Chakero', title: 'Noticias', icon: 'mdi-newspaper' },
-      { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda / Store' },
-      { to: '/actividades', name: 'Actividades', title: 'Actividades', icon: 'mdi-calendar' },
-      { to: '/creditos', name: 'Creditos', title: '', icon: 'mdi-account-group' }
+      // { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda' },
+      { to: '/suto', name: 'Suto', title: 'Nosotros', icon: 'mdi-account-group' }
     ],
     news: []
   }),

@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const KEY = '5cf2e66408166968da3b30b4'
-const serverName = 'https://dicapi.kribi.com.co/'
-// const serverName = 'http://localhost:5000/'
+// const serverName = 'https://dicapi.kribi.com.co/'
+const serverName = 'http://localhost:5000/'
 
 const oneWeek = 60 * 60 * 24 * 7
 
@@ -14,7 +14,7 @@ const headers = {
 class Server {
   static async getPalabrasPorLetra (letra, page) {
     const result = await axios
-      .get(`${serverName}words/list/${letra}/${page}`, {
+      .get(`${serverName}words/list/${letra}/9/${page}`, {
         headers
       })
     return result.data.response
@@ -22,22 +22,16 @@ class Server {
 
   static async buscarPalabra (palabra) {
     let data = await axios
-      .get(`${serverName}words/info/${palabra}`, {
+      .get(`${serverName}words/byWord/${palabra}/true`, {
         headers
       })
 
-    data = data.data[0]
-    return {
-      definicion: data.definicion.split('/'),
-      ejemplos: data.ejemplos,
-      palabra: data.palabra,
-      idioma: data.idioma
-    }
+    return data.data.response[0]
   }
 
   static async autoCompletado (value) {
     const result = await axios
-      .get(`${serverName}words/byWord/${value}`, {
+      .get(`${serverName}words/byWord/${value}/false`, {
         headers
       })
     return result.data.response

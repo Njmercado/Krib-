@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Server from './serverConfigurations'
+import Server from './serverRequests'
 import ShowNews from './views/ShowNews.vue'
 import Store from './store'
 

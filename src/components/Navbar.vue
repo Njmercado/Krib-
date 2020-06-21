@@ -7,10 +7,10 @@
       <v-toolbar-title>
         <v-img
           @click="goToHome()"
-          style="cursor: pointer"
-          data-aos="zoom-in"
+          style="cursor: pointer;"
+          class="animated zoomIn"
           src="https://i.ibb.co/3FNTmL4/LOGO-KRIB-Mesa-de-trabajo-1.png"
-          width="calc(9vh + 9vw)"></v-img>
+          width="calc(6vh + 9vw)"></v-img>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>

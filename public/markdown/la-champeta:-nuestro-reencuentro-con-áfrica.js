@@ -1,0 +1,22 @@
+const markdown = `
+# La Champeta: nuestro reencuentro con África.
+<br/>
+<br/>
+
+¿Será que ya ha llegado el momento en que la champeta trascienda como género musical que represente y cohesione a Colombia a un nivel tanto nacional como internacional?... Decir que sí podría considerarse un poco apresurado. Pero, es innegable el gran momento que últimamente ha estado experimentando este género. Basta sólo con mencionar la aclamada presentación de la superestrella colombiana, Shakira, en el medio tiempo de un mega evento como el Super Bowl. Esos minutos fueron una plataforma sin precedentes para mostrar la champeta como baile y género musical. Aunque aún muchos discutan si lo que bailó Shakira fue champeta o soukous (género musical proveniente de la cuenca del Río Congo, centro del continente africano, y que además, es una de las bases rítmicas de la champeta), lo cierto es que luego de dicha presentación, aumentó  el interés tanto en Colombia como en el mundo sobre este sonido urbano que comenzó a desarrollarse a partir  de la década de los setentas en los barrios periféricos, predominantemente de población negra de Cartagena de Indias a orillas del Mar Caribe.
+<br/>
+
+El origen de la champeta puede ser considerado como una manifestación de los contextos urbanos en el Gran Caribe donde luego de la segunda mitad del siglo XX, géneros musicales producto de la fusión de ritmos comenzaron a surgir como el caso del reggae (Jamaica), el dancehall (Jamaica), el soca (Trinidad y Tobago), el kompas (Haití) y el zouk (Antillas Francesas), por ejemplo. Todas estas músicas caribeñas tienen en común la forma de difusión, a través de parlantes de sonido potente, en el caso particular de la champeta, a través del picó. El desarrollo de la champeta no es ajena a esta realidad debido a que sus bases rítmicas son producto de la fusión de diversos géneros musicales, entre estos están: soukous, jùjú, highlife, kompas, bullerengue, mapalé, zambapalo, chalupa y en menor medida reggae, así como también, ritmos afro-brasileros.
+<br/>
+
+Antes que existiera lo que hoy es conocido como champeta, los picós (sound systems o sistemas de sonido potente), que posteriormente se convirtieron en el principal símbolo de un género y un movimiento cultural como la champeta, resonaban, en los barrios populares de ciudades del Caribe colombiano como Cartagena, Barranquilla y Santa Marta, sonidos provenientes de África, contagiosos para el espectador, y que rápidamente, fueron bautizados como terapia africana. La denominada terapia africana fue el sonido predominante de los picós entre los años setentas y
+comienzo de los ochentas. Posteriormente, en la década de los ochentas, artistas locales en Cartagena provenientes de San Basilio de Palenque, empezaron a impulsar la denominada terapia criolla que era una adaptación de aquellos sonidos provenientes de África y sobre esos ritmos se comenzaron a incluir letras en español y en lengua palenquera. De este modo, la champeta comenzó a tener una identidad y un estilo que la diferenciaba de su antecesora, la terapia africana.
+<br/>
+
+Los años noventas y principios de los dos mil se puede considerar como la época dorada de la champeta porque además tener una identidad como género musical, se consolida como un movimiento cultural en toda la región Caribe de Colombia, desde La Guajira hasta Turbo en Antioquia,  la champeta se escuchaba masivamente. Pasó de sonar de forma casi exclusiva en los barrios populares a sonar tanto en zonas rurales como en sectores de la alta sociedad. A pesar de que la popularidad de la champeta se expandió en diferentes espacios, aún se mantenía el estigma y los prejuicios sobre este tipo de música por su origen negro y popular. Sin embargo, la champeta es un género que se reinventa, que continúa llamando la atención tanto de la industria musical comercial como de musicólogos, melómanos, picoteros o simplemente de los más sencillos bailadores que solo quieren pasar buen rato.
+<br/>
+
+La champeta más allá de su definición como género musical, es un reencuentro con nuestras raíces africanas, es una forma de resistencia y empoderamientos del ser negro, de la identidad caribe. Representa la voz de un pueblo históricamente invisibilizado que habla de su cotidianidad, de sus problemas, de sus sueños y que con sus letras y ritmos que resuenan en un picó dice: ¡ESTO ES LO QUE SOMOS Y AQUÍ ESTAMOS!
+`
+
+module.exports = markdown

@@ -10,9 +10,7 @@
         md="2"
         lg="2"
       >
-        <v-avatar :size="chosenUserIndex === index ? '128' : '90'" style="cursor: pointer" @click="chosenUserIndex = index">
-          <img :src="user" />
-        </v-avatar>
+        <img class="animated zoomIn avatar-transition" :src="user" @click="chosenUserIndex = index"/>
       </v-col>
     </v-row>
 
@@ -38,13 +36,7 @@
         md="2"
         lg="2"
       >
-        <v-avatar
-          :size="chosenUserIndex === index+3 ? '128' : '90'"
-          @click="chosenUserIndex = index+3"
-          style="cursor: pointer"
-        >
-          <img :src="user" />
-        </v-avatar>
+        <img class="animated zoomIn avatar-transition" :src="user" @click="chosenUserIndex = index+3"/>
       </v-col>
     </v-row>
 
@@ -109,10 +101,10 @@
     <v-row justify="center">
       <v-col cols="10" md="8" lg="8">
         Kribí como herramienta digital es una solución interactiva y divertida; permite llegar a
-        diferentes lugares que cuenten con acceso a internet, evitando que los usuarios 
+        diferentes lugares que cuenten con acceso a internet, evitando que los usuarios
         tengan que trasladarse. También reduce valores negativos ambientales que se dan
-        para acceder a escenarios de aprendizajes tradicionales. La plataforma, por ende, 
-        funciona como complemento y responde positivamente a la integración de las tecnologías 
+        para acceder a escenarios de aprendizajes tradicionales. La plataforma, por ende,
+        funciona como complemento y responde positivamente a la integración de las tecnologías
         de información y la comunicación en las dinámicas sociales y de formación.
       </v-col>
     </v-row>
@@ -134,7 +126,7 @@ export default {
       {
         img: "https://i.ibb.co/MS2ptVg/estebantohe.jpg",
         name: "Esteban Torregroza",
-        role: "ACM (Director de contenido académico)",
+        role: 'ACM (Director de contenido académico)',
         info:
           "Internacionalista con énfasis en estudios políticos y africanos. Se desempeñó como presidente del grupo estudiantil afro de la Universidad del Norte, Makeda Kahina, durante el año 2017. Se considera un ciudadano comprometido con la justicia social, la visibilización de los pueblos afrodescendientes y la educación como motor de los cambios sociales y la equidad."
       },
@@ -189,5 +181,21 @@ export default {
   components: {
     // Creator
   }
-};
+}
 </script>
+
+<style scoped>
+  .avatar-transition {
+    width: calc(4.5vh + 4.5vw);
+    height: calc(4.5vh + 4.5vw);
+    border-radius: 100%;
+    cursor: pointer;
+    transition-property: width height;
+    transition-duration: 1s;
+  }
+
+  .avatar-transition:hover {
+    width: calc(6.5vh + 6.5vw);
+    height: calc(6.5vh + 6.5vw);
+  }
+</style>

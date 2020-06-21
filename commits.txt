@@ -1,4 +1,19 @@
 Modificaciones:
+  TODO:
+    + Quitar etiqueta amarilla del componente Modal, ya no es necesaria.
+    + Mejorar la interfaz de la sopa de letras y optimizar ese código.
+    + Arreglar el juego de sopa de letras, hay un problema con el mostrar las palabras
+  General:
+    ? El archivo para poder llamar al servidor ahora se llama 'serverRequests.js'
+    + Instalado animate.css --> animaciones
+  Components:
+    Word:
+      + Agregado parametro de definiciones.
+      + Agregado listado de defininiciones de la palabra.
   Views:
-    * Diccionario:
-      + Solucionado problema de poder obtener todas las palabras de una letra despues de buscar alguna palabra.
+    Diccionario:
+      ? Ahora solo se van a mostrar 9 palabras por letra por página.
+      ? Al buscar una palabra, esta ahora muestra sus definiciones, cuando se hace click sobre ella se logra ver sus ejemplos y más información que se irá agregando.
+    Suto:
+      - Eliminado los componentes de avatares.
+      + Agregada animaciones on hover de las fotos de cada participante --> zoomIn on hover y zoomIn al iniciar la página.

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Server from '../serverConfigurations'
+import Server from '../serverRequests'
 import { mapGetters, mapMutations } from 'vuex'
 let marked = require('marked')
 

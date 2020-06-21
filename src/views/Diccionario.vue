@@ -37,13 +37,19 @@
           xs='6'
           sm='6'
           md='3'
-          lg='3'
-          xl='3'
+          lg='4'
+          xl='4'
           v-for='(palabra, index) in getPalabrasPorLetra'
           :key='index'
           @click='mostrarModal(palabra.palabra)'
         >
-          <Word color="transparent" text-color="#6E2E1E" :elevation="false" :word='palabra.palabra' size='20px'></Word>
+          <Word
+            color="transparent"
+            text-color="#6E2E1E"
+            :elevation="false"
+            :word='palabra.palabra'
+            :definitions='palabra.definicion'
+            size='20px'></Word>
         </v-col>
       </v-row>
       <v-row

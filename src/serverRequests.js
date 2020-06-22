@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-const KEY = '5cf2e66408166968da3b30b4'
-// const serverName = 'https://dicapi.kribi.com.co/'
-const serverName = 'http://localhost:5000/'
+const KEY = process.env.VUE_APP_API_KEY
+const serverName = process.env.VUE_APP_API_ROUTE_DEV
 
 const oneWeek = 60 * 60 * 24 * 7
 

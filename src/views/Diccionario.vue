@@ -5,6 +5,8 @@
     <v-container fluid style="background-color: #6E2E1E; min-height: 20em; padding-top: calc(3vh + 3vw);">
       <img data-aos="zoom-in" :src="require('@/assets/icono-diccionario.png')" style="max-width: calc(9vh + 9vw)"/>
       <v-col cols='11' xs='7' sm="7" md='4' lg="6" class="mx-auto my-auto">
+
+        <!-- Input to search some words -->
         <v-text-field
           placeholder='Buscar'
           color='#562011'
@@ -71,7 +73,6 @@
       :palabra='getPalabra'
       :ejemplos='getEjemplos'
       :definicion='getDefinicion'
-      :idioma='getIdioma'
     ></Modal>
 
     <DictionaryInfoModal :open='dictionaryInfoModalOpener'></DictionaryInfoModal>
@@ -123,8 +124,7 @@ export default {
       'getAutoCompletado',
       'getPalabra',
       'getDefinicion',
-      'getEjemplos',
-      'getIdioma'
+      'getEjemplos'
     ]),
     isThereMoreWords () {
       return !this.getPalabrasPorLetra.length > 0

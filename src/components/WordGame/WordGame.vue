@@ -4,77 +4,57 @@
     persistent
     max-width="60vw"
     :fullscreen="isMobile()"
-    v-model="closeWordGameModal">
+    v-model="closeWordGameModal"
+  >
 
     <template v-slot:activator="{ on }">
       <v-icon v-on="on" ref="activate"></v-icon>
     </template>
 
-    <v-card>
+    <v-card style="background-color: var(--yellow-background)">
       <v-card-text>
-        <v-container
-          fluid
-          grid-list-md
-          grid-list-lg
-        >
-          <v-row
-            justify="center"
-          >
-            <label
-              style="color: brown; font-weight: bold; font-size: 2em"
-            >
-              {{foundWords}}
-            </label>
-          </v-row>
+        <v-container fluid grid-list-md grid-list-lg>
 
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <Soup
-              :words = 'randomWords'
-              @selectedWord="selectedWordHandler"
-              @wordsFound="foundWordsHandler"
-              :disabled="startGame"
-            >
-            </Soup>
+            <v-row justify="center" align="center">
 
-            <v-col
-              cols="12"
-              xs="12"
-              sm="12"
-              md="3"
-              lg="3"
-              xl="3"
-            >
-              <Timer
-                :minutes="5"
-                :seconds="0"
-                :reset="resetTimer"
-                color="#E0E0E0"
-                @start="startHandler"
+              <Soup
+                :words = 'randomWords'
+                @selectedWord="selectedWordHandler"
+                @wordsFound="foundWordsHandler"
+                :disabled="startGame"
               >
-              </Timer>
+              </Soup>
 
-              <WordList
-                :words="randomWords"
-                :deleteWord="selectedWord"
-                @nextLevel="nextLevelHandler"
-              ></WordList>
+              <v-col cols="12" xs="12" sm="12" md="3" lg="3" xl="3">
+                <label class="mb-10" style="color: brown; font-weight: bold; font-size: 2em">
+                  {{foundWords}}
+                </label>
 
-              <v-row justify="center">
+                <Timer
+                  :minutes="5"
+                  :seconds="0"
+                  :reset="resetTimer"
+                  color="#E0E0E0"
+                  @start="startHandler"
+                  >
+                </Timer>
+
+                <WordList
+                  :words="randomWords"
+                  :deleteWord="selectedWord"
+                  @nextLevel="nextLevelHandler"
+                ></WordList>
+
                 <v-btn
-                  class="btn"
+                  class="btn text-center text-lowercase"
                   @click="closeWordGameModal = false"
                   color="#b11100"
-                  rounded
-                  dark
+                  rounded dark small
                 >
                   Cerrar
                 </v-btn>
-              </v-row>
-            </v-col>
-          </v-row>
+              </v-col>
+            </v-row>
         </v-container>
       </v-card-text>
     </v-card>
@@ -105,7 +85,7 @@ export default {
 
       // Cada vez que se abra este modal se generará una nueva sopa de letras
       // Por ende es necesario llamar esta funcion desde acá
-      this.setRandomWords(10)
+      this.setRandomWords(8)
     },
     closeWordGameModal () {
       this.selectedWord = ''

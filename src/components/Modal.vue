@@ -1,9 +1,6 @@
 <template>
   <v-dialog max-width='50em' v-model="realModalOpener">
     <v-card color="var(--yellow-background)">
-     <div class="idioma">
-      <kbd style="background-color: #DEA44A">{{idioma}}</kbd>
-     </div>
       <v-card-title class='titulo'>
         <v-row justify='center'>
           <div id='titulo' class='white--text' style="font-size: 1.2em">
@@ -26,7 +23,7 @@
           <v-row
             v-for='(ejemplo,index) in ejemplos'
             :key='index'
-            class='white--text ejemplo'
+            class='text-white ejemplo'
             justify='center'
             align='center'
           >
@@ -45,8 +42,7 @@ export default {
     'open',
     'ejemplos',
     'definicion',
-    'palabra',
-    'idioma'
+    'palabra'
   ],
   data: () => ({
     realModalOpener: false
@@ -60,7 +56,7 @@ export default {
 
 </script>
 
-<style>
+<style scope>
 
 .titulo{
   background: #53220C;

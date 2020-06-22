@@ -10,7 +10,6 @@ export default new Vuex.Store({
     palabra: 'Palabra',
     definicion: 'Definicion',
     ejemplos: [],
-    idioma: 'Espanol',
     listaPalabras: [],
     letra: '',
     randomWords: '',
@@ -31,12 +30,11 @@ export default new Vuex.Store({
           state.palabra = result.palabra
           state.definicion = result.definicion
           state.ejemplos = result.ejemplos
-          state.idioma = result.idioma
         })
       }
     },
     setAutoCompletado (state, palabra) {
-      if (palabra.length > 2) {
+      if (palabra.length > 2 && palabra.slice(-1) === ',') {
         Server.autoCompletado(palabra).then(result => {
           state.listaPalabras = result
         })
@@ -48,7 +46,7 @@ export default new Vuex.Store({
       Server.palabrasRandom(numeroPalabras).then(result => {
         state.randomWords = result.map(el => ({
           palabra: el.palabra.toLowerCase(),
-          definicion: el.definicion.toLowerCase()
+          definicion: el.definicion[0].toLowerCase()
         }))
       })
     },
@@ -60,7 +58,6 @@ export default new Vuex.Store({
     getEjemplos: state => state.ejemplos,
     getDefinicion: state => state.definicion,
     getPalabra: state => state.palabra,
-    getIdioma: state => state.idioma,
     getPalabrasPorLetra: state => state.listaPalabras,
     getLetra: state => state.letra,
     getRandomWords: state => state.randomWords,

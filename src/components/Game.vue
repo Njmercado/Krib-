@@ -14,7 +14,7 @@
             class="text-lowercase"
             @click="wordGame ? openCloseModal() : null"
             :href="wordGame ? null : link"
-            :target="wordGame ? null : _blank"
+            :target="wordGame ? null : '_blank'"
             small
             dark
             rounded

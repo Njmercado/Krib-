@@ -34,7 +34,7 @@ export default new Vuex.Store({
       }
     },
     setAutoCompletado (state, palabra) {
-      if (palabra.length > 2 && palabra.slice(-1) === ',') {
+      if (palabra.length >= 2) {
         Server.autoCompletado(palabra).then(result => {
           state.listaPalabras = result
         })

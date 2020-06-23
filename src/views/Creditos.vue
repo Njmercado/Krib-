@@ -84,7 +84,7 @@
     <!-- Valores -->
     <v-row justify="center" class="mt-10" style="font-weight: bold; font-size: 2em; color:  #5f3323">Valores</v-row>
     <v-row justify="center">
-      <v-chip class="mx-2">Conectar</v-chip>
+      <v-chip class="mx-2">Conexión</v-chip>
       <v-chip class="mx-2">Pasión</v-chip>
       <v-chip class="mx-2">Innovación</v-chip>
     </v-row>
@@ -191,7 +191,7 @@ export default {
     border-radius: 100%;
     cursor: pointer;
     transition-property: width height;
-    transition-duration: 1s;
+    transition-duration: .5s;
   }
 
   .avatar-transition:hover {

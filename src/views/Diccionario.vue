@@ -10,7 +10,7 @@
         <v-text-field
           placeholder='Buscar'
           color='#562011'
-          v-on:keyup='setAutoCompletado(valueTextField); someLetterButtonHasBeenPressed = false'
+          @keyup.enter='setAutoCompletado(valueTextField); someLetterButtonHasBeenPressed = false'
           v-model='valueTextField'
           solo
         ></v-text-field>

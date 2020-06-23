@@ -1,31 +1,18 @@
 Modificaciones:
   TODO:
     + Implementar el local storage, para evitar realizar llamado a la api.
-    + Poner el ícono nuevo de la pestaña.
-    + Reducir la velocidad a la cual se cambian las fotos en el home.
-  General:
-    + Agregadas las variables de entorno --> key y route
+    + Agregar al servidor el tener una lista de miembros y su respectiva descripción, para poder evitar el guardar esa info en local.
+  Root:
+    Public:
+      index.html:
+      - Eliminada libreria(cdn) de tether.js --> posicionamiento absoluto
+      - Eliminado metra author
+      ? Cambiado icono de la pestaña.--> icono de la nueva imagen, lapiz.
   Storage:
-    setRandomWords:
-      ? Las definiciones de las palabras, por parte del servidor, ahora vienen en una lista.
-      ? Al ser de esta forma toca obtener la primera, y unica, definicion del array.
-      ? Antes 'definicion.toLowerCase()', ahora 'definicion[0].toLowerCase()'
-  Components:
-    Modal:
-      - Eliminado parametro de idioma.
-    WordGame:
-      WordGame:
-        ? Cambiado color background --> #FFF6DE
-        ? Ahora el contador de las palabras encontradas se encuentra en la parte derecha, para poder tener una mejor visión de todo el panorama.
-      Soup:
-        ? Ahora la grilla tiene un tamaño de 11x11
-        ? Las letras ahora están en mayuscula, para poder distingirlas mejor.
-        ? Las letras ahora tienen un border gris alrededor para poder distingirlas mejor.
-        ? Al encontrar una palabra, ya no se generarán colores aleatorios para cada una. Ahora son de color marron.
-      WordList:
-        ? Ahora las palabras estarán en mayuscula.
-        ? Los chips ahora tienen un margen de 8px.
-    Timer:
-      - El boton de start ahora es iniciar.
-      ? Al precionar 'inicias' ahora el boton se quita hasta que el intervalo haya terminado.
-      - Eliminados los ifs en computed.time, para poder implementar una expresión matematica que los reemplace.
+    setAutoCompletado:
+      ? Ahora solo, como verificación, se necesita que la palabra sea de longitud mayor o igual a 2.
+  Views:
+    Diccionario:
+      - Eliminado parametro @keyup que se encontraba en el textField de busqueda de palabras.
+      + Agregado parametro @keyup.enter para el textField de busqueda de palabras.
+      ? Este cambio se realizó para que no se esté llamando al servidor con busquedas innecesarias.

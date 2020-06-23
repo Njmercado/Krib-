@@ -15,7 +15,7 @@
           solo
         ></v-text-field>
       </v-col>
-      <v-btn class="btn text-capitalize" small color="#dea44a" style="color: 53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
+      <v-btn class="btn text-capitalize" small color="#dea44a" style="color: #53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
     </v-container>
 
     <!-- Letras del diccionario -->

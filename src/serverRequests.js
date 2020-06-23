@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 const KEY = process.env.VUE_APP_API_KEY
-const serverName = process.env.VUE_APP_API_ROUTE_DEV
-
+const serverName = process.env.VUE_APP_API_ROUTE
 const oneWeek = 60 * 60 * 24 * 7
 
 const headers = {

@@ -2,17 +2,16 @@ Modificaciones:
   TODO:
     + Implementar el local storage, para evitar realizar llamado a la api.
     + Agregar al servidor el tener una lista de miembros y su respectiva descripción, para poder evitar el guardar esa info en local.
-  Root:
-    Public:
-      index.html:
-      - Eliminada libreria(cdn) de tether.js --> posicionamiento absoluto
-      - Eliminado metra author
-      ? Cambiado icono de la pestaña.--> icono de la nueva imagen, lapiz.
-  Storage:
-    setAutoCompletado:
-      ? Ahora solo, como verificación, se necesita que la palabra sea de longitud mayor o igual a 2.
+  Router:
+    + Agregada ruta --> /yurumbí
+  Components:
+    BookLibrary:
+      + Componente creado.
+      ? Este componente mostrará información referente a un libro, o articulo academico, dentro de la biblioteca.
   Views:
-    Diccionario:
-      - Eliminado parametro @keyup que se encontraba en el textField de busqueda de palabras.
-      + Agregado parametro @keyup.enter para el textField de busqueda de palabras.
-      ? Este cambio se realizó para que no se esté llamando al servidor con busquedas innecesarias.
+    Suto:
+      ? Cambios ortograficos de las descripciones del proyecto.
+      + Agregado agradecimientos a todo el mundo.
+    Yurumbí:
+      + Vista creada.
+      ? Esta vista funciona para poder visualizar todas los libros referentes a las tradiciones palenqueras.

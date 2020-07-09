@@ -66,6 +66,11 @@ let routes = [
     path: '/contactos',
     name: 'Contactos',
     component: () => import('./views/Contactos.vue')
+  },
+  {
+    path: '/yurumbí',
+    name: 'Yurumbí',
+    component: () => import('./views/Yurumbi.vue')
   }
 ]
 

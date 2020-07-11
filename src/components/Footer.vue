@@ -39,20 +39,19 @@
 
 <script>
 export default {
-  name: "",
+  name: 'Footer',
   data: () => ({
     socialmedias: [
-      { link: "", icon: "mdi-facebook" },
+      { link: 'https://facebook.com/profile.php?id=102086614663123&ref=content_filter', icon: 'mdi-facebook' },
       {
-        link: "https://www.instagram.com/kribicultura/",
-        icon: "mdi-instagram"
-      },
-      { link: "", icon: "mdi-twitter" }
+        link: 'https://www.instagram.com/kribicultura/',
+        icon: 'mdi-instagram'
+      }
     ]
   }),
   props: [],
   watch: {},
   methods: {},
   components: {}
-};
+}
 </script>

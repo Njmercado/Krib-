@@ -15,7 +15,7 @@ export default [
     url: 'https://cvc.cervantes.es/lengua/thesaurus/pdf/39/TH_39_123_100_0.pdf'
   },
   {
-    name: 'Comportamientos y actitudes lingüisticas de los hablantes bilingües de la comunidad pelenquera',
+    name: 'Comportamientos y actitudes lingüisticas de los hablantes bilingües de la comunidad palenquera',
     image: 'https://revistas.unimagdalena.edu.co/public/journals/4/cover_issue_63_es_ES.jpg',
     url: 'https://revistas.unimagdalena.edu.co/index.php/jangwapana/article/view/581/543'
   },

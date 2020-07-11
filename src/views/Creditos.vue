@@ -94,84 +94,50 @@
     <v-row justify="center" class="mt-10" style="font-weight: bold; font-size: 2em; color:  #5f3323">Reconocimiento y agradecimiento</v-row>
     <v-row justify="center">
       <v-col cols="10" md="8" lg="8" style="text-align: left">
-        Somos los que hicieron, los que se fueron en cuerpo pero su legado permanece entre nosotros y cada una de las acciones de los que nos rodean. Kribí es el resultado de los sueños del pueblo en responder a la necesidad de adaptarse a nuevos escenarios y reconocer que hay que dar pasos acelerados en el uso de tecnologías  como mediador para la interacción y la comunicación entre las personas. <br/> <br/> 
+        Somos los que hicieron, los que se fueron en cuerpo pero su legado permanece entre nosotros y cada una de las acciones de los que nos rodean. Kribí es el resultado de los sueños del pueblo en responder a la necesidad de adaptarse a nuevos escenarios y reconocer que hay que dar pasos acelerados en el uso de tecnologías  como mediador para la interacción y la comunicación entre las personas. <br/><br/>
 
         El proceso de creación de este mundo que llamamos Kribí se construye a partir de la capacidad de unir diferentes sueños, procesos e imaginar un espacio virtual que sea puente entre San Basilio de Palenque y su gente con cualquier parte del mundo través de un clic.
         A lo largo de mi crecimiento personal, profesional y durante la creación este proyecto  he contado con el apoyo de individuos que desde sus diferentes saberes han aportado bloques para cimentar lo que hoy con dedicación  le ofrezco a la sociedad circundante. <br/> <br/>
 
-        Gracias a los maestros y maestras de mi vida, a la Mag.  Edith Márquez (Magisterio),por su apoyo incondicional al ser madre y guía; al Lic. Luis Felipe Salgado y  al Dr. Hiram Smith (Bucknell University), mis profesores de Lengua Palenquera; uno desde su saber ancestral y el otro desde la indagación académica, La mujeres investigadoras de Palenque: Mag. Juana ‘Pavi‘ Pérez (QEPD) quien nos ha dejado sus aportes alrededor de la lengua, Lic. Solmery Cásseres por obsequiar a la comunidad palenquera y al ámbito académico el primer diccionario físico de la Lengua Palenquera; agradezco igualmente a Lic. Basilia Pérez y Lic. Ereilis Navarro escritoras y docentes que son modelos a seguir; a mis abuelas palenqueras Maria ‘Coco‘ Reyes, Florentina ‘Yayi‘ Salas, Gregoria ‘Ita‘ Hernandez, Maria ‘Mayito‘ Cassiani (QEPD) quienes desde el amor incondicional me transmiten saberes ancestrales. Mis agradecimiento también van al Dr.  Dolcey Romero (Universidad Simón Bolívar), experto en historia afro, a quien rindo mi aprecio. Quiero dar un agradecimiento especial a los hermanos de proceso de mi madre junto a los que por su tenacidad, entrega y amor por la comunidad crecí admirando, ellos son: Dr. Francisco Asprilla, Lic. Manuel ‘Cho Mane‘ Hernandez, Lic Emel ‘Biko‘ Salas, Lic. Faustino ‘Cho Fao‘ Torres, Esp. Adán Torres; a los maestros que inspiran a través de la música Viviano Torres, Rafael Cassiani, José ‘Paito‘ Valdez, Tomás Teherán; a Uninorte por abrazar en mi recorrido por el alma mater mis ideas y con la guía de este plantel apoyarme en el trabajo del Diccionario A ten mbila. <br/> <br/>
+        Gracias a los maestros y maestras de mi vida, a la Mag.  Edith Márquez (Magisterio),por su apoyo incondicional al ser madre y guía; al Lic. Luis Felipe Salgado y  al Dr. Hiram Smith (Bucknell University), mis profesores de Lengua Palenquera; uno desde su saber ancestral y el otro desde la indagación académica, La mujeres investigadoras de Palenque: Mag. Juana ‘Pavi‘ Pérez (QEPD) quien nos ha dejado sus aportes alrededor de la lengua, Lic. Solmery Cásseres por obsequiar a la comunidad palenquera y al ámbito académico el primer diccionario físico de la Lengua Palenquera; agradezco igualmente a Dra. Rafaela Vos (Universidad del Atlántico) Lic. Basilia Pérez y Lic. Ereilis Navarro escritoras y docentes que son modelos a seguir; a mis abuelas palenqueras Maria ‘Coco‘ Reyes, Florentina ‘Yayi‘ Salas, Gregoria ‘Ita‘ Hernandez, Maria ‘Mayito‘ Cassiani (QEPD) quienes desde el amor incondicional me transmiten saberes ancestrales. Mis agradecimiento también van al Dr.  Dolcey Romero (Universidad del Atlántico, Universidad Simón Bolívar), experto en historia afro, a quien rindo mi aprecio. Quiero dar un agradecimiento especial a los hermanos de proceso de mi madre junto a los que por su tenacidad, entrega y amor por la comunidad crecí admirando, ellos son: Dr. Francisco Asprilla, Lic. Manuel ‘Cho Mane‘ Hernandez, Lic Emel ‘Biko‘ Salas, Lic. Faustino ‘Cho Fao‘ Torres, Esp. Adán Torres; a los maestros que inspiran a través de la música Viviano Torres, Rafael Cassiani, José ‘Paito‘ Valdez, Tomás Teherán; a Uninorte por abrazar en mi recorrido por el alma mater mis ideas y con la guía de este plantel apoyarme en el trabajo del Diccionario A ten mbila. <br/> <br/>
 
-        Gracias a la familia Márquez, a los amigos en especial Psic. Enrique Márquez, Lic. Danilo Reyes, Mag. Aiden Salgado, Esp. Juan Betancur, Dr. Alexander Steffanell (Lee University), Lic. Wilber Lareus, Lic. Carlos Ordoñez, Lic. Luis ‘Luisja‘ Hernandez. Cabe destacar a los jóvenes que han sido miembros de Makeda Kahina, y muy en especial agradecimiento a Angie Zuñiga por abanderar el proceso de creación cibernética del espacio Kribí; a Nino Mercado por su trabajo arduo y paciencia en desarrollo web, a Aldair Soto por dejarse contagiar desde el Festival Internacional de Cine Evaristo Márquez - FICEM‘ a crear acciones en pro a la comunidad palenquera y llevar a otro nivel la estética gráfica, a Lic. Esteban Torregrosa por su dedicación a la academia, y a cada uno de los miembros de Kribí que imprimen sus ideas, conocimientos, tiempo y pasión por entregar al mundo a través de este Palenque vivo y virtual la mejor experiencia para los usuarios.
+        Gracias a la familia Márquez, a los amigos en especial Psic. Enrique Márquez, Lic. Danilo Reyes, Mag. Aiden Salgado, Esp. Juan Betancur (ACNUR), Dr. Alexander Steffanell (Lee University), Lic. Wilber Lareus, Lic. Carlos Ordoñez, Lic. Luis ‘Luisja‘ Hernandez. Cabe destacar a los jóvenes que han sido miembros de Makeda Kahina, y muy en especial agradecimiento a Angie Zuñiga por abanderar el proceso de creación cibernética del espacio Kribí; a Nino Mercado por su trabajo arduo y paciencia en desarrollo web, a Aldair Soto por dejarse contagiar desde el Festival Internacional de Cine Evaristo Márquez - FICEM‘ a crear acciones en pro a la comunidad palenquera y llevar a otro nivel la estética gráfica, a Lic. Esteban Torregrosa por su dedicación a la academia, y a cada uno de los miembros de Kribí que imprimen sus ideas, conocimientos, tiempo y pasión por entregar al mundo a través de este Palenque vivo y virtual la mejor experiencia para los usuarios.
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import Suto from '../controller/suto.js'
+
 export default {
-  name: "Creditos",
+  name: 'Creditos',
   data: () => ({
-    information: [
-      {
-        img: "https://i.ibb.co/34c9z3j/Angie-Zu-iga.png",
-        name: "Angie Zuñiga",
-        role: "CIO (Directora de sistemas de información)",
-        info:
-        "Persona creativa e innovadora, que cree en la tecnología como esa amiga que la cultura necesita para su preservación y para un mayor alcance en las personas. Actual estudiante de ingeniería de Sistemas en la Universidad del Norte, apasionada por la riqueza que tenemos en Colombia en diversidad de lugares y gentes."
-      },
-      {
-        img: "https://i.ibb.co/MS2ptVg/estebantohe.jpg",
-        name: "Esteban Torregroza",
-        role: 'ACM (Director de contenido académico)',
-        info:
-        "Internacionalista con énfasis en estudios políticos y africanos. Se desempeñó como presidente del grupo estudiantil afro de la Universidad del Norte, Makeda Kahina, durante el año 2017. Se considera un ciudadano comprometido con la justicia social, la visibilización de los pueblos afrodescendientes y la educación como motor de los cambios sociales y la equidad."
-      },
-      {
-        img: "https://i.ibb.co/2g3yCg5/Crisdelahozmar.jpg",
-        name: "Cristina De la Hoz",
-        role: "CEO (Presidente ejecutivo)",
-        info:
-        "Mujer sobresaliente y lideresa de la comunidad palenquera. Una de las autoras de KRIBÍ, fundadora del Grupo juvenil Afro Makeda Kahina y egresada del programa de Contaduría pública de la Universidad del Norte. Le gusta bailar y disfrutar del ocaso en la playa."
-      },
-      {
-        img: "https://i.ibb.co/pytGNbf/Screenshot-20190922-190842-1.jpg",
-        name: "Nino Mercado",
-        role: "CTO (Director de tecnología)",
-        info:
-        "Amante de la tecnología. Cada dia trato de sobresalir para dejar presente mis capacidades y demostrarme que soy capaz de crecer. Actualmente soy estudiante de la hermosa carrera de Ing.Sistemas y Computación, de la Universidad del Norte, en donde he desarrollado todo el amor que siento hacia el desarrollo y las techs"
-      },
-      {
-        img:
-        "https://i.ibb.co/gSCVDT5/LRM-EXPORT-8639413058818-20190930-000137383.jpg",
-        name: "Aldair Soto",
-        role: "CDO (Director de estrategia digital)",
-        info:
-        "Persona emprendedora y creativa capaz de crear ideas adaptándose a los cambios culturales de la sociedad, proponiendo conceptos nuevos y trabajando en una imagen para representar la cultura palanquera al mundo entero a través de la fotografía y el diseño gráfico."
-      }
-    ],
+    information: [],
     chosenUserIndex: 2,
-    chosenUserName: "",
-    chosenUserRole: "",
-    chosenUserInfo: ""
+    chosenUserName: '',
+    chosenUserRole: '',
+    chosenUserInfo: ''
   }),
   mounted () {
+    this.information = Suto
     let { name, role, info } = this.information[2]
     this.chosenUserName = name
     this.chosenUserRole = role
     this.chosenUserInfo = info
   },
   watch: {
-    chosenUserIndex(val) {
-      let { name, role, info } = this.information[val];
-      this.chosenUserName = name;
-      this.chosenUserRole = role;
-      this.chosenUserInfo = info;
+    chosenUserIndex (val) {
+      let { name, role, info } = this.information[val]
+      this.chosenUserName = name
+      this.chosenUserRole = role
+      this.chosenUserInfo = info
     }
   },
   methods: {
     // Return link of user image
     getImages () {
-      return this.information.map(el => el.img);
+      return this.information.map(el => el.img)
     }
   },
   components: {

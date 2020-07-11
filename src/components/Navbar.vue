@@ -15,14 +15,23 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn class="mx-2 btn" small icon dark style="background-color: white;">
+      <v-btn
+        href="https://facebook.com/profile.php?id=102086614663123&ref=content_filter"
+        target="_blank"
+        class="mx-2 btn"
+        small icon dark
+        style="background-color: white;"
+      >
         <v-icon color="#53220C">mdi-facebook</v-icon>
       </v-btn>
-      <v-btn class="mx-2 btn" small icon dark style="background-color: white">
+      <v-btn
+        href="https://www.instagram.com/kribicultura/"
+        target="_blank"
+        class="mx-2 btn"
+        small icon dark
+        style="background-color: white"
+      >
         <v-icon color="#53220C">mdi-instagram</v-icon>
-      </v-btn>
-      <v-btn class="mx-2 btn" small icon dark style="background-color: white">
-        <v-icon color="#53220C">mdi-twitter</v-icon>
       </v-btn>
 
       <template v-slot:extension>

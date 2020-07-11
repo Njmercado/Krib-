@@ -2,16 +2,15 @@ Modificaciones:
   TODO:
     + Implementar el local storage, para evitar realizar llamado a la api.
     + Agregar al servidor el tener una lista de miembros y su respectiva descripción, para poder evitar el guardar esa info en local.
-  Router:
-    + Agregada ruta --> /yurumbí
   Components:
-    BookLibrary:
-      + Componente creado.
-      ? Este componente mostrará información referente a un libro, o articulo academico, dentro de la biblioteca.
+    Footer:
+      - Eliminado icono de Twitter --> no hay cuenta.
+      ? Agregado link de Facebook.
+    NavBar:
+      - Eliminado icono de Twitter --> no hay cuenta.
+      ? Agregado link de Facebook.
   Views:
-    Suto:
-      ? Cambios ortograficos de las descripciones del proyecto.
-      + Agregado agradecimientos a todo el mundo.
+    Chakero:
+      + Agregada Noticia cultural Apu. --> esta noticia está separada del resto mediante expansion.
     Yurumbí:
-      + Vista creada.
-      ? Esta vista funciona para poder visualizar todas los libros referentes a las tradiciones palenqueras.
+      ? Corregidos errores ortograficos.

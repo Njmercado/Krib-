@@ -12,9 +12,7 @@
         class="white--text align-end"
         gradient="to bottom, rgba(0,0,0,.0), rgba(0,0,0,.5)"
       >
-        <v-card-title
-          v-if="hover"
-          :class="{ 'show-btns': hover }">{{title}}</v-card-title>
+        <v-card-title style="font-size: 1em; font-weight: bold">{{title}}</v-card-title>
         <v-card-text
           v-if="hover"
           :class="{ 'show-btns': hover }"

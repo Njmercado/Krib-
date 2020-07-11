@@ -86,3 +86,10 @@ export default {
   }
 }
 </script>
+
+<style scope>
+  img {
+    width: 90%;
+    border-radius: 16px;
+  }
+</style>

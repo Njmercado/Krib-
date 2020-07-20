@@ -2,12 +2,14 @@ export default [
   {
     name: 'La lengua palenquera juvenil: contacto y conflicto de estructuras gramaticales',
     image: 'https://imgv2-2-f.scribdassets.com/img/document/317454296/original/ff01ebc0ba/1577309335?v=1',
-    url: 'http://www.personal.psu.edu/jml34/Palenquero-UniverSOS.pdf'
+    url: 'http://www.personal.psu.edu/jml34/Palenquero-UniverSOS.pdf',
+    type: 'Cultura'
   },
   {
     name: 'Patterns of variable tense-aspect marking in Palenquero creole',
     image: 'https://0.academia-photos.com/attachment_thumbnails/34729044/mini_magick20190321-1974-1hwkjv0.png?1553171015',
-    url: 'https://www.academia.edu/8322181/Patterns_of_variable_tense-aspect_marking_in_Palenquero_creole'
+    url: 'https://www.academia.edu/8322181/Patterns_of_variable_tense-aspect_marking_in_Palenquero_creole',
+    type: 'Ciencia'
   },
   {
     name: 'EL LÉXICO NEGRO-AFRICANO DE SAN BASILIO DE PALENQUE',

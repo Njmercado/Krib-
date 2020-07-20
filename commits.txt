@@ -3,14 +3,23 @@ Modificaciones:
     + Implementar el local storage, para evitar realizar llamado a la api.
     + Agregar al servidor el tener una lista de miembros y su respectiva descripción, para poder evitar el guardar esa info en local.
   Components:
-    Footer:
-      - Eliminado icono de Twitter --> no hay cuenta.
-      ? Agregado link de Facebook.
-    NavBar:
-      - Eliminado icono de Twitter --> no hay cuenta.
-      ? Agregado link de Facebook.
+    DialogOfChoices:
+      + Componente creado.
+      ? Este componente funciona para poder elegir una cantidad x de elementos, dados, dentro de una lista.
+      ? Retorna los elementos seleccionados dentro de la lista.
+      ? Limpia los elementos seleccionados con un boton de limpieza que este tiene dentro de su UI.
+    BookLibray:
+      ? Cambiado color del fondo, ahora es de color #DEA44A.
+      ? Agregadas chips al final, indicando a que tipo de lectura este libro se refiere. Lecturas como: Cultura o Ciencia.
+      ? Cuando se hace on hover sobre el libro este muestra el titulo completo agrandandose el tamañano de la card.
+      ? Los bordes, tanto de la imagen como del card, ahora son redondeados.
   Views:
-    Chakero:
-      + Agregada Noticia cultural Apu. --> esta noticia está separada del resto mediante expansion.
+    Juegos:
+      - Eliminado el juego de quizlet. --> este ya no será necesario ya que se van a implementar otras soluciones a futuro.
+    Diccionario:
+      ? Ahora el input de busqueda es redondo.
+      ? Ahora el boton de más información es redondo.
     Yurumbí:
-      ? Corregidos errores ortograficos.
+      + Agregado input para poder buscar los articulos, basandose en su nombre.
+      + Agregado boton flotante que activa el modal de filtrado para poder visualizar resultados segun el tipo de gusto del lector.
+      ? Ahora solo son 4 libros por fila.

@@ -4,7 +4,7 @@
     <!-- Searcher -->
     <v-container fluid style="background-color: #6E2E1E; min-height: 20em; padding-top: calc(3vh + 3vw);">
       <img data-aos="zoom-in" :src="require('@/assets/icono-diccionario.png')" style="max-width: calc(9vh + 9vw)"/>
-      <v-col cols='11' xs='7' sm="7" md='4' lg="6" class="mx-auto my-auto">
+      <v-col cols='11' xs='7' sm="7" md='4' lg="4" xl="4" class="mx-auto">
 
         <!-- Input to search some words -->
         <v-text-field
@@ -13,9 +13,10 @@
           @keyup.enter='setAutoCompletado(valueTextField); someLetterButtonHasBeenPressed = false'
           v-model='valueTextField'
           solo
+          rounded
         ></v-text-field>
       </v-col>
-      <v-btn class="btn text-capitalize" small color="#dea44a" style="color: #53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
+      <v-btn class="btn text-capitalize" small rounded color="#dea44a" style="color: #53220c" @click="openDictionaryInfoModal()" data-aos="zoom-in">más info</v-btn>
     </v-container>
 
     <!-- Letras del diccionario -->

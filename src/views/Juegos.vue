@@ -30,13 +30,13 @@ export default {
   name: 'Curso',
   data: () => ({
     games: [
-      {
-        link:
-          'https://quizlet.com/co/448615742/luenga-ri-palenge-flash-cards/?x=1jqt',
-        img: 'https://i.ibb.co/Sy1hFrc/quizlet.jpg',
-        title: 'Quizlet',
-        desc: 'Práctica y juega mientras aprendes lengua palenquera'
-      },
+      // {
+      //   link:
+      //     'https://quizlet.com/co/448615742/luenga-ri-palenge-flash-cards/?x=1jqt',
+      //   img: 'https://i.ibb.co/Sy1hFrc/quizlet.jpg',
+      //   title: 'Quizlet',
+      //   desc: 'Práctica y juega mientras aprendes lengua palenquera'
+      // },
       {
         link: null,
         img: 'https://i.ibb.co/b3bFz6z/words-Game.png',

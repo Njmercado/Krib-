@@ -10,6 +10,8 @@ import VueScrollTo from 'vue-scrollto'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import VueYoutubeEmbed from 'vue-youtube-embed'
+
 Vue.config.productionTip = false
 
 const vuetifyOptions = {}
@@ -17,6 +19,7 @@ const vuetifyOptions = {}
 Vue.use(Vuetify)
 Vue.use(Vuex)
 Vue.use(VueScrollTo)
+Vue.use(VueYoutubeEmbed, { global: true })
 
 new Vue({
   created () {

@@ -58,7 +58,7 @@ let routes = [
   // },
   {
     path: '/chakero/:id',
-    name: 'Chakero',
+    name: 'Noticia',
     props: true,
     component: ShowNews
   },

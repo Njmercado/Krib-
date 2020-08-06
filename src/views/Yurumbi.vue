@@ -1,7 +1,6 @@
 <template>
   <div style="background-color: var(--yellow-background); padding: 2em;">
     <v-container fluid>
-
       <!-- Book searcher input -->
       <v-col cols="12" sm="8" md="4" lg="4" xl="3" class="mx-auto">
         <v-text-field
@@ -15,6 +14,16 @@
           solo
           clearable
         ></v-text-field>
+
+        <!-- Videos button -->
+        <v-tooltip right>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn v-on="on" color="#53220C" class="btn" @click="openVideosPage()" rounded>
+              <v-icon style="color: #DEA44A">mdi-movie</v-icon>
+            </v-btn>
+          </template>
+          <span>Videos</span>
+        </v-tooltip>
       </v-col>
 
       <!-- List of books found by user or given by us -->
@@ -24,22 +33,37 @@
         </v-col>
       </v-row>
 
-      <!-- Videos section -->
-      <v-row>
-
+      <!-- Pagination -->
+      <v-row justify="center">
+        <v-pagination
+          v-model="page"
+          :length="totalOfPages"
+          :total-visible="booksPerPage/2+2"
+          color="#53220C"
+          class="mt-5"
+          style="margin-bottom: -32px"
+          circle
+        ></v-pagination>
       </v-row>
 
       <!-- Dialog close-open handler -->
-      <v-btn
-        color="#53220C"
-        style="position: fixed; bottom: 2em; right: 2em"
-        class="btn"
-        @click="openCloseModal = !openCloseModal"
-        rounded
-        fab
-      >
-        <v-icon style="color: #DEA44A">mdi-filter</v-icon>
-      </v-btn>
+      <v-tooltip top left>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-on="on"
+            color="#53220C"
+            style="position: fixed; bottom: 2em; right: 2em"
+            class="btn"
+            @click="openCloseModal = !openCloseModal"
+            data-aos="shake"
+            rounded
+            fab
+          >
+            <v-icon style="color: #DEA44A">mdi-filter</v-icon>
+          </v-btn>
+        </template>
+        <span>Filtrar por categoria</span>
+      </v-tooltip>
     </v-container>
 
     <!-- Dialog to choose books based on specific type -->
@@ -65,38 +89,62 @@ export default {
     books: [],
     bookSearcherVariable: "",
     openCloseModal: false,
-    typesOfBooks: []
+    typesOfBooks: [],
+    totalOfPages: 0,
+    page: 1,
+    booksPerPage: 10,
   }),
   watch: {
-    bookSearcherVariable (e) {
-      if (e === null || e.length === 0) this.books = books
-    }
+    bookSearcherVariable(e) {
+      if (e === null || e.length === 0) this.books = books;
+    },
+    page(e) {
+      const currentPosition = (e - 1) * 8;
+      this.books = books.slice(currentPosition, currentPosition + 8);
+    },
   },
   methods: {
-    handleBookTextFieldSearcher (e) {
-      let searchAsRegex = new RegExp(e, 'i')
-      this.books = books.filter(el => {
-        if (el.name.search(searchAsRegex) >= 0) return el
-      })
+    handleBookTextFieldSearcher(e) {
+      let searchAsRegex = new RegExp(e, "i");
+      this.books = books.filter((el) => {
+        if (el.name.search(searchAsRegex) >= 0) return el;
+      });
     },
-    chosenTypes (e) {
+    chosenTypes(e) {
       if (e.length > 0) {
-        this.books = books.filter(el => {
-          let index = e.indexOf(el.type)
-          if (index >= 0) return el
-        })
+        this.books = books.filter((el) => {
+          let index = e.indexOf(el.type);
+          if (index >= 0) return el;
+        });
       } else {
-        this.books = books
+        this.books = books;
       }
-    }
+    },
   },
-  mounted () {
-    this.books = books;
+  mounted() {
+    this.books = books.slice(0, 8);
     this.typesOfBooks = categories;
+    this.totalOfPages = Math.ceil(books.length / 8);
   },
   components: {
     BookLibrary,
-    TypeOfBookChooserModal
-  }
+    TypeOfBookChooserModal,
+  },
 };
 </script>
+
+<style scoped>
+@keyframes shake {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+.shake {
+  animation: shake 1s infinite forwards;
+}
+</style>

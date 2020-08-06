@@ -24,6 +24,11 @@
         </v-col>
       </v-row>
 
+      <!-- Videos section -->
+      <v-row>
+
+      </v-row>
+
       <!-- Dialog close-open handler -->
       <v-btn
         color="#53220C"
@@ -49,7 +54,8 @@
 </template>
 
 <script>
-import books from "../controller/library.js";
+import books from "../data/library.js";
+import categories from "../data/libraryBooksCategories.js";
 import BookLibrary from "../components/BookLibrary.vue";
 import TypeOfBookChooserModal from "../components/DialogOfChoices.vue";
 
@@ -59,7 +65,7 @@ export default {
     books: [],
     bookSearcherVariable: "",
     openCloseModal: false,
-    typesOfBooks: ['Cultura', 'Arte', 'Ciencia']
+    typesOfBooks: []
   }),
   watch: {
     bookSearcherVariable (e) {
@@ -86,6 +92,7 @@ export default {
   },
   mounted () {
     this.books = books;
+    this.typesOfBooks = categories;
   },
   components: {
     BookLibrary,

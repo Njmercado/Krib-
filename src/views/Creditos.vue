@@ -108,7 +108,7 @@
 </template>
 
 <script>
-import Suto from '../controller/suto.js'
+import Suto from '../data/suto.js'
 
 export default {
   name: 'Creditos',

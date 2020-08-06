@@ -23,7 +23,7 @@ export default {
     links: [
       { name: 'Komensá', to: '/', icon: 'mdi-home', title: 'Inicio' },
       { name: 'Kajangarí', to: '/kajangarí', icon: 'mdi-book', title: 'Diccionario' },
-      { to: '/yurumbí', name: 'Yurumbí', title: 'Libreria', icon: 'mdi-book-open-variant' },
+      { to: '/yurumbí', name: 'Biblioteca', title: 'Libreria', icon: 'mdi-book-open-variant' },
       { name: 'Arrelike', to: '/arrelike', icon: 'mdi-teach', title: 'Actividades' },
       { to: '/chakero', name: 'Chakero', title: 'Noticias', icon: 'mdi-newspaper' },
       // { name: 'Bentorriyo', to: '/bentorriyo', icon: 'mdi-cart', title: 'Tienda' },

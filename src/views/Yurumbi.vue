@@ -10,12 +10,10 @@
           append-outer-icon="mdi-magnify"
           @click:append-outer="handleBookTextFieldSearcher(bookSearcherVariable)"
           color="brown"
-          rounded
-          solo
-          clearable
+          rounded solo clearable
         ></v-text-field>
 
-        <!-- Videos button -->
+        <!-- Button to redirect to videos section -->
         <v-tooltip right>
           <template v-slot:activator="{ on, attrs }">
             <v-btn v-on="on" color="#53220C" class="btn" @click="openVideosPage()" rounded>
@@ -26,7 +24,7 @@
         </v-tooltip>
       </v-col>
 
-      <!-- List of books found by user or given by us -->
+      <!-- List of avaliable books -->
       <v-row align="center">
         <v-col xs="12" sm="6" md="4" lg="3" xl="2" v-for="(book, index) in books" :key="index">
           <BookLibrary :book="book"></BookLibrary>
@@ -46,7 +44,7 @@
         ></v-pagination>
       </v-row>
 
-      <!-- Dialog close-open handler -->
+      <!-- Categories filter Dialog open-close button handler -->
       <v-tooltip top left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -66,7 +64,7 @@
       </v-tooltip>
     </v-container>
 
-    <!-- Dialog to choose books based on specific type -->
+    <!-- Dialog to choose books based on specific categories -->
     <TypeOfBookChooserModal
       :open="openCloseModal"
       :items="typesOfBooks"
@@ -78,59 +76,62 @@
 </template>
 
 <script>
-import books from "../data/library.js";
-import categories from "../data/libraryBooksCategories.js";
-import BookLibrary from "../components/BookLibrary.vue";
-import TypeOfBookChooserModal from "../components/DialogOfChoices.vue";
+import books from '../data/library.js'
+import categories from '../data/libraryBooksCategories.js'
+import BookLibrary from '../components/BookLibrary.vue'
+import TypeOfBookChooserModal from '../components/DialogOfChoices.vue'
 
 export default {
-  name: "Yurumbi",
+  name: 'Yurumbi',
   data: () => ({
     books: [],
-    bookSearcherVariable: "",
+    bookSearcherVariable: '',
     openCloseModal: false,
     typesOfBooks: [],
     totalOfPages: 0,
     page: 1,
-    booksPerPage: 10,
+    booksPerPage: 8
   }),
   watch: {
-    bookSearcherVariable(e) {
-      if (e === null || e.length === 0) this.books = books;
+    bookSearcherVariable (e) {
+      if (e === null || e.length === 0) this.books = books
     },
-    page(e) {
-      const currentPosition = (e - 1) * 8;
-      this.books = books.slice(currentPosition, currentPosition + 8);
-    },
+    page (e) {
+      const currentPosition = (e - 1) * this.booksPerPage
+      this.books = books.slice(currentPosition, currentPosition + this.booksPerPage)
+    }
   },
   methods: {
-    handleBookTextFieldSearcher(e) {
-      let searchAsRegex = new RegExp(e, "i");
+    handleBookTextFieldSearcher (e) {
+      let searchAsRegex = new RegExp(e, 'i')
       this.books = books.filter((el) => {
-        if (el.name.search(searchAsRegex) >= 0) return el;
-      });
+        if (el.name.search(searchAsRegex) >= 0) return el
+      })
     },
-    chosenTypes(e) {
+    chosenTypes (e) {
       if (e.length > 0) {
         this.books = books.filter((el) => {
-          let index = e.indexOf(el.type);
-          if (index >= 0) return el;
-        });
+          let index = e.indexOf(el.type)
+          if (index >= 0) return el
+        })
       } else {
-        this.books = books;
+        this.books = books
       }
     },
+    openVideosPage () {
+      this.$router.push('/yurumbí/videos')
+    }
   },
-  mounted() {
-    this.books = books.slice(0, 8);
-    this.typesOfBooks = categories;
-    this.totalOfPages = Math.ceil(books.length / 8);
+  mounted () {
+    this.books = books.slice(0, this.booksPerPage)
+    this.typesOfBooks = categories
+    this.totalOfPages = Math.ceil(books.length / this.booksPerPage)
   },
   components: {
     BookLibrary,
-    TypeOfBookChooserModal,
-  },
-};
+    TypeOfBookChooserModal
+  }
+}
 </script>
 
 <style scoped>

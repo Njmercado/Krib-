@@ -71,6 +71,11 @@ let routes = [
     path: '/yurumbí',
     name: 'Yurumbí',
     component: () => import('./views/Yurumbi.vue')
+  },
+  {
+    path: '/yurumbí/videos',
+    name: 'Yurumbi videos',
+    component: () => import('./views/Yurumbi.Videos.vue')
   }
 ]
 
